@@ -10,11 +10,12 @@
   color: $primary-brand-colour;
   min-height: 80vh;
   gap: 3rem;
+  max-width: 98vw;
 }
 .container {
   position: relative;
   width: 80vw;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .imgContainer {
