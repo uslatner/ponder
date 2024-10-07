@@ -15,7 +15,7 @@ const SpinnersGrid = ({ spinners }) => {
             cloudImageSrc={spinner.cloudImageSrc}
           />
           <Link href={spinner.link}>
-            <button>Customise your own</button>
+            <button className={styles.customiseBtn}>Customise your own</button>
           </Link>
         </div>
       ))}
