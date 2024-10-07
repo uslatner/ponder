@@ -7,10 +7,8 @@ import Loaders from "../components/Loaders/Loaders";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <Loaders />
-      <Footer />
     </div>
   );
 }
