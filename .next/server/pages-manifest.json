@@ -1,14 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/": "pages/index.js",
-  "/spinners/1": "pages/spinners/1.js",
-  "/spinners/3": "pages/spinners/3.js",
   "/_error": "pages/_error.js",
-  "/spinners/4": "pages/spinners/4.js",
-  "/spinners/CircularSpinner": "pages/spinners/CircularSpinner.js",
-  "/spinners/2": "pages/spinners/2.js",
-  "/spinners/DotSpinner": "pages/spinners/DotSpinner.js",
-  "/spinners/Wave": "pages/spinners/Wave.js",
   "/_document": "pages/_document.js",
-  "/spinners/SequentialBoxMorphing": "pages/spinners/SequentialBoxMorphing.js"
+  "/": "pages/index.js",
+  "/spinners/[spinnerName]": "pages/spinners/[spinnerName].js"
 }

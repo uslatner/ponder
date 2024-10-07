@@ -1,18 +1,20 @@
 // pages/spinners/[name].jsx
 import { useRouter } from "next/router";
-import CircularSpinner from "../../components/Spinners/CircularSpinner"; // Adjust the path as needed
-import DotSpinner from "../../components/Spinners/DotSpinner"; // Adjust the path as needed
+import CircularPage from "../../components/Spinners/CircularSpinner1";
+import DotPage from "../../components/Spinners/DotSpinner1"; // Adjust the path as needed
 
-import styles from "./[name].module.scss"; // You can use a common stylesheet or separate ones
+// import styles from "./[name].module.scss"; // You can use a common stylesheet or separate ones
 
 const SpinnerPage = () => {
   const router = useRouter();
-  const { name } = router.query; // Get the spinner name from the URL
+  const { spinnerName } = router.query; // Get the spinner name from the URL
+
+  console.log(router.query.spinnerName);
 
   // Define your spinners based on names
   const spinners = {
     circularspinner: {
-      Component: CircularSpinner,
+      Component: CircularPage,
       initialValues: {
         color1: "blue",
         color2: "green",
@@ -23,7 +25,7 @@ const SpinnerPage = () => {
       },
     },
     dotspinner: {
-      Component: DotSpinner,
+      Component: DotPage,
       initialValues: {
         colors: ["blue", "#EAE0D5", "#C6AC8F"],
       },
@@ -32,7 +34,7 @@ const SpinnerPage = () => {
   };
 
   // Get the current spinner based on the name
-  const spinner = spinners[name.toLowerCase()]; // Convert to lowercase for matching
+  const spinner = spinnerName ? spinners[spinnerName.toLowerCase()] : null; // Convert to lowercase for matching
 
   if (!spinner) {
     return <div>Spinner not found</div>; // Handle case for invalid name
@@ -41,8 +43,8 @@ const SpinnerPage = () => {
   const { Component, initialValues } = spinner;
 
   return (
-    <div className={styles.container}>
-      <h1>{name.replace(/_/g, ' ').toUpperCase()} Spinner</h1>
+    <div >
+      <h1>{spinnerName.replace(/_/g, ' ').toUpperCase()} Spinner</h1>
       <Component initialValues={initialValues} />
       {/* Add any other relevant content or forms here */}
     </div>

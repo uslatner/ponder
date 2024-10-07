@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import styles from "./1.module.scss";
+import styles from "../../pages/spinners/1.module.scss";
 
-import { DotSpinner } from "./DotSpinner";
+import { DotSpinner } from "./DotSpinner1";
 
 import Image from "next/image";
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 
-const DotSpinner = ({ initialValues }) => {
+const DotPage = ({ initialValues }) => {
     const [formValues, setFormValues] = useState({
       colors: [...initialValues.colors],
     });

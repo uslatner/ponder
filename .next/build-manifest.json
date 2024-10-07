@@ -1,102 +1,31 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-78c92fac7aa8fdd8.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/ndZydmT_gc9lUQzOJjy31/_buildManifest.js",
-    "static/ndZydmT_gc9lUQzOJjy31/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/664-fe029c8b38e64ec1.js",
-      "static/chunks/675-f6b4bb7aa5cb9513.js",
-      "static/css/15b43ccb2188a5d7.css",
-      "static/chunks/pages/index-8d77ad3c12368602.js"
-    ],
     "/_app": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/css/c5f79b8c7d94e3be.css",
-      "static/chunks/pages/_app-3f73ad0914c58645.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/pages/_error-77823ddac6993d35.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
-    "/spinners/1": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/664-fe029c8b38e64ec1.js",
-      "static/chunks/675-f6b4bb7aa5cb9513.js",
-      "static/css/8332bcbab540e947.css",
-      "static/chunks/pages/spinners/1-bb77fc65122ee8b3.js"
-    ],
-    "/spinners/2": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/664-fe029c8b38e64ec1.js",
-      "static/chunks/675-f6b4bb7aa5cb9513.js",
-      "static/css/8332bcbab540e947.css",
-      "static/chunks/pages/spinners/2-f58bb1b91c81e917.js"
-    ],
-    "/spinners/3": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/664-fe029c8b38e64ec1.js",
-      "static/css/8332bcbab540e947.css",
-      "static/chunks/pages/spinners/3-00ce743ac2e4ef4b.js"
-    ],
-    "/spinners/4": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/664-fe029c8b38e64ec1.js",
-      "static/css/8332bcbab540e947.css",
-      "static/chunks/pages/spinners/4-4fc51d935acfe3f0.js"
-    ],
-    "/spinners/CircularSpinner": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/pages/spinners/CircularSpinner-2fa8c77e7228700d.js"
-    ],
-    "/spinners/DotSpinner": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/pages/spinners/DotSpinner-4121f56762388c73.js"
-    ],
-    "/spinners/SequentialBoxMorphing": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/pages/spinners/SequentialBoxMorphing-5ed0b99c623f1f61.js"
-    ],
-    "/spinners/Wave": [
-      "static/chunks/webpack-d38be8d96a62f950.js",
-      "static/chunks/framework-ecc4130bc7a58a64.js",
-      "static/chunks/main-22c448dfb58825f6.js",
-      "static/chunks/686-d58f58aa0f36e52a.js",
-      "static/chunks/pages/spinners/Wave-7df4a43d93eab2e2.js"
+    "/spinners/[spinnerName]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/spinners/[spinnerName].js"
     ]
   },
   "ampFirstPages": []

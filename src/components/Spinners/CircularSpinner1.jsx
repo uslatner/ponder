@@ -1,12 +1,12 @@
 // pages/spinners/1.js or CircularPage.js
 import Image from "next/image";
-import styles from "./1.module.scss";
+import styles from "../../pages/spinners/1.module.scss";
 import React, { useState } from "react";
-import { CircularSpinner } from "./CircularSpinner";
+import { CircularSpinner } from "../../pages/spinners/CircularSpinner";
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import Link from "next/link";
 
-const CircularSpinner = ({ initialValues }) => {
+const CircularPage = ({ initialValues }) => {
     const [formValues, setFormValues] = useState(initialValues);
 
   const handleChange = (e) => {
