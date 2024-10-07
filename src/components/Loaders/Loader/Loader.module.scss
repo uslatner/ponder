@@ -31,10 +31,10 @@
 
   .oblakImage {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Background image */
-    width: 100%;
+    top: 10px;
+    left: 25px;
+    z-index: 1;
+    width: 90% !important;
     height: 100%;
   }
 
