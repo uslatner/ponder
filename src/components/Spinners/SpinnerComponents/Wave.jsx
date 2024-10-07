@@ -14,8 +14,8 @@ const wavePropagation = keyframes`
 
 // Styled component for the SVG
 const StyledSVG = styled.svg`
-  width: ${(props) => props.size || "30px"};
-  height: ${(props) => props.size || "26px"};
+  width: ${(props) => props.size || "100px"};
+  height: ${(props) => props.size || "100px"};
   fill: none;
   display: flex;
 `;
@@ -31,7 +31,7 @@ const WavePart = styled.path`
 
 // Wave Component with customizable props
 export function Wave({ size, color, opacity, speed }) {
-  const defaultColor = ["pink", "#EAE0D5"];
+  const defaultColor = ["#ffa9a1", "#FF6F61"];
   const fillColor = color || defaultColor;
   const defaultSpeed = "2s"; // Define the defaultSpeed here
 
