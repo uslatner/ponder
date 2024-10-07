@@ -1,15 +1,16 @@
-// pages/spinners/[name].jsx
+// pages/spinners/[spinnerName].jsx
 import { useRouter } from "next/router";
-import CircularPage from "../../components/Spinners/CircularSpinner1";
-import DotPage from "../../components/Spinners/DotSpinner1"; // Adjust the path as needed
+import CircularPage from "../../components/Spinners/CircularPage";
+import DotPage from "../../components/Spinners/DotPage";
+import SeqBoxMorphPage from "../../components/Spinners/SequentialBoxMorphingPage";
+import WavePage from "../../components/Spinners/WavePage";
 
-import styles from "./1.module.scss"; // You can use a common stylesheet or separate ones
+import styles from "./1.module.scss";
 
 const SpinnerPage = () => {
   const router = useRouter();
-  const { spinnerName } = router.query; // Get the spinner name from the URL
+  const { spinnerName } = router.query;
 
-  // Define your spinners based on names
   const spinners = {
     circularspinner: {
       Component: CircularPage,
@@ -28,14 +29,27 @@ const SpinnerPage = () => {
         colors: ["blue", "#EAE0D5", "#C6AC8F"],
       },
     },
-    // Add more spinners as needed
+    seqboxmorph: { // Add Sequential Box Morph spinner
+      Component: SeqBoxMorphPage,
+      initialValues: {
+        colors: ["#2f3e46", "#e0e0e0", "#6b6252", "#ccb69b"],
+      },
+    },
+    wavespinner: {
+      Component: WavePage,
+      initialValues: {
+        size: "60",
+        colors: ["pink", "#EAE0D5"],
+        opacity: 1,
+        speed: "2s",
+      },
+    }
   };
 
-  // Get the current spinner based on the name
-  const spinner = spinnerName ? spinners[spinnerName.toLowerCase()] : null; // Convert to lowercase for matching
+  const spinner = spinnerName ? spinners[spinnerName.toLowerCase()] : null;
 
   if (!spinner) {
-    return <div>Spinner not found</div>; // Handle case for invalid name
+    return <div>Spinner not found</div>;
   }
 
   const { Component, initialValues } = spinner;
@@ -44,7 +58,6 @@ const SpinnerPage = () => {
     <div className={styles.container}>
       <h1>{spinnerName.replace(/_/g, ' ').toUpperCase()} Spinner</h1>
       <Component initialValues={initialValues} />
-      {/* Add any other relevant content or forms here */}
     </div>
   );
 };

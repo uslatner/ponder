@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <CircularSpinner/>
+      <CircularSpinner />
       <Loaders />
       <h1>Spinners</h1>
       <ul>
@@ -19,7 +19,12 @@ export default function Home() {
         <li>
           <a href="/spinners/dotspinner">Dot Spinner</a>
         </li>
-        {/* Add more links as needed */}
+        <li>
+          <a href="/spinners/seqboxmorph">Sequential Box Morph</a>
+        </li>
+        <li>
+          <a href="/spinners/wavespinner">Wave Spinner</a>
+        </li>
       </ul>
     </div>
   );
