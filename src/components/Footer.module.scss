@@ -1,0 +1,9 @@
+@import '../styles/variables';
+
+/* styles/Footer.module.scss */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: $primary-brand-colour;
+  color: $background-colour;
+}

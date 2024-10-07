@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.container {
+  background-color: $primary-brand-colour;
+  color: $background-colour;
+  padding: 2rem 5% 5%;
+  /* max-width: 1600px; */
+  margin: 5% 5% 5%;
+  width: 50%;
+  border-radius: 4rem 4rem 4rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageWrapper {
+  position: relative;
+  width: 300px; /* Set the container size */
+  height: 300px;
+
+  .oblakImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Background image */
+    width: 150%;
+    height: 150%;
+  }
+
+  .spinnerComponent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the smaller spinner image */
+    z-index: 2; /* Spinner image in front */
+    width: 45% !important; /* Reduce the size of the spinner image */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+.generatedPropsContainer {
+  background-color: $background-colour;
+  color: $primary-brand-colour;
+
+  max-height: 200px; // Fixed height to prevent expansion
+  overflow: auto; // Allow scrolling if the content overflows
+  border: 1px solid $primary-brand-colour; // Optional styling
+  padding: 10px; // Optional padding
+  box-sizing: border-box; // Include padding and border in total width and height
+}
+
+.form {
+  display: flex;
+  flex-direction: column; // Stack input fields vertically
+  width: 100%; // Fill the propsCodeContainer width
+}
+
+.inputField {
+  min-height: 40px; // Set a minimum height for input fields
+  padding: 5px; // Add some padding
+  margin: 10px 0; // Space between input fields
+}

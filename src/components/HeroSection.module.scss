@@ -1,0 +1,86 @@
+@import "../styles/variables";
+
+/* styles/HeroSection.module.scss */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 4rem;
+  background: $background-colour;
+  color: $primary-brand-colour;
+  min-height: 80vh;
+  gap: 3rem;
+}
+.container {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+}
+
+.imgContainer {
+  position: relative;
+  width: 110%;
+  height: 110%;
+}
+.btnContainer {
+  position: absolute; /* set button to an absolute position */
+  top: 75%; /* adjust the top position of the button */
+  left: 30%; /* adjust the left position of the button */
+  // transform: translate(-50%, -50%); /* center the button */
+
+  display: flex;
+}
+.imgBtn {
+  text-decoration: none;
+  font-size: $font-size-large;
+  color: $primary-brand-colour;
+  font-size: 1.1rem;
+  font-weight: $font-weight-bold;
+  background-color: $background-colour;
+  border: 5px solid $primary-brand-colour;
+  padding: 10px 50px;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+  flex: 1;
+
+  &:hover {
+    background-color: $primary-brand-colour;
+    border: 5px solid $primary-brand-colour;
+    color: $background-colour;
+  }
+}
+.heroImg {
+  width: 80vw;
+  height: 80vh;
+  object-fit: contain;
+  position: relative;
+}
+
+.content {
+  max-width: 50%;
+}
+
+.getStartedBtn {
+  text-decoration: none;
+  font-size: $font-size-large;
+  color: $primary-brand-colour;
+  font-size: 1.1rem;
+  font-weight: $font-weight-bold;
+  background-color: $background-colour;
+  border: 5px solid $primary-brand-colour;
+  padding: 10px 50px;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: $primary-brand-colour;
+    border: 5px solid $primary-brand-colour;
+    color: $background-colour;
+  }
+}
+
+.buttonWrapper {
+  margin-top: 2rem;
+}

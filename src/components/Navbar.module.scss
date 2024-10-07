@@ -1,0 +1,39 @@
+@import '../styles/variables';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: $background-colour;
+}
+
+.logoContainer {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: $background-colour;
+  font-size: 1.1rem;
+  font-weight: $font-weight-medium;
+  background-color: $primary-brand-colour;
+  padding: 15px 50px;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-brand-colour;
+  }
+}

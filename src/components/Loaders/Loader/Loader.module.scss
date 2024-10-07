@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+  width: 500px;
+  height: 750px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainerSpinner {
+    position: relative;
+    width: 35%;
+    height: 100%;
+  }
+
+.imageWrapper {
+  position: relative;
+  width: 500px; /* Set the container size */
+  height: 400px;
+
+  .oblakImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Background image */
+    width: 100%;
+    height: 100%;
+  }
+
+  .spinnerImage {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the smaller spinner image */
+    z-index: 2; /* Spinner image in front */
+    width: 35% !important; /* Reduce the size of the spinner image */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.spinnerText {
+  margin-top: 1rem; /* Adjust margin to place text below images */
+  font-size: 1rem;
+  color: $background-colour;
+  text-align: center; /* Center text */
+  z-index: 3; /* Make sure text is on top */
+}
+
+
