@@ -1,11 +1,12 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import styles from "./layout.module.scss"; // Import your CSS module
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className={styles.layoutWrapper}>
       <Navbar />
-      <main>{children}</main>
+      <main className={styles.mainContent}>{children}</main>
       <Footer />
     </div>
   );
