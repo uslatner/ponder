@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../../pages/spinners/1.module.scss";
-
-import { DotSpinner } from "./DotSpinner1";
-
+import { DotSpinner } from "../../pages/spinners/DotSpinner";
 import Image from "next/image";
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 
 const DotPage = ({ initialValues }) => {
-    const [formValues, setFormValues] = useState({
-      colors: [...initialValues.colors],
-    });
+  const [formValues, setFormValues] = useState({
+    colors: [...initialValues.colors],
+  });
+  const [copiedCode, setCopiedCode] = useState(''); // Initialize copiedCode state
 
   const handleChange = (index, e) => {
     const newColors = [...formValues.colors]; // Create a copy of the current colors
-    newColors[index] = e.target.value; // Update the color at the
+    newColors[index] = e.target.value; // Update the color at the index
     setFormValues((prev) => ({
       ...prev, // Keep the other properties
       colors: newColors, // Update the colors array
@@ -23,10 +22,10 @@ const DotPage = ({ initialValues }) => {
 
   const handleCopyComponent = () => {
     const componentString = `<DotSpinner 
-    colors={[${formValues.colors.map((color) => `"${color}"`).join(", ")}]} 
+      colors={[${formValues.colors.map((color) => `"${color}"`).join(", ")}]} 
     />`;
-    setCopiedCode(componentString);
-    navigator.clipboard.writeText(componentString);
+    setCopiedCode(componentString); // Set the component string to copiedCode
+    navigator.clipboard.writeText(componentString); // Copy to clipboard
   };
 
   return (
@@ -50,14 +49,13 @@ const DotPage = ({ initialValues }) => {
             <div key={index}>
               <label>Color {index + 1}</label>
               <input
-                    key={index}
-                    type="text"
-                    value={color}
-                    onChange={(e) => handleChange(index, e)}
-                />
+                key={index}
+                type="text"
+                value={color}
+                onChange={(e) => handleChange(index, e)}
+              />
             </div>
           ))}
-
           <button type="button" onClick={handleCopyComponent}>
             Generate your props
           </button>
@@ -74,6 +72,6 @@ const DotPage = ({ initialValues }) => {
       </div>
     </div>
   );
-}
+};
 
 export default DotPage;

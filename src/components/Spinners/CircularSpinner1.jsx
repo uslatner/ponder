@@ -1,4 +1,3 @@
-// pages/spinners/1.js or CircularPage.js
 import Image from "next/image";
 import styles from "../../pages/spinners/1.module.scss";
 import React, { useState } from "react";
@@ -7,7 +6,8 @@ import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import Link from "next/link";
 
 const CircularPage = ({ initialValues }) => {
-    const [formValues, setFormValues] = useState(initialValues);
+  const [formValues, setFormValues] = useState(initialValues);
+  const [copiedCode, setCopiedCode] = useState(''); // Initialize copiedCode state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,8 +26,8 @@ const CircularPage = ({ initialValues }) => {
       opacity2="${formValues.opacity2}" 
       speed="${formValues.speed}" 
     />`;
-    setCopiedCode(componentString);
-    navigator.clipboard.writeText(componentString);
+    setCopiedCode(componentString); // Set the component string to copiedCode
+    navigator.clipboard.writeText(componentString); // Copy to clipboard
   };
 
   return (
@@ -107,10 +107,11 @@ const CircularPage = ({ initialValues }) => {
           <div>
             <label>Speed</label>
             <input
-                type="text"
-                name="color1"
-                value={formValues.color1}
-                onChange={handleChange}
+              type="text"
+              name="speed"
+              placeholder="speed"
+              onChange={handleChange}
+              value={formValues.speed}
             />
           </div>
           <button type="button" onClick={handleCopyComponent}>

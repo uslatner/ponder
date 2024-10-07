@@ -3,13 +3,11 @@ import { useRouter } from "next/router";
 import CircularPage from "../../components/Spinners/CircularSpinner1";
 import DotPage from "../../components/Spinners/DotSpinner1"; // Adjust the path as needed
 
-// import styles from "./[name].module.scss"; // You can use a common stylesheet or separate ones
+import styles from "./1.module.scss"; // You can use a common stylesheet or separate ones
 
 const SpinnerPage = () => {
   const router = useRouter();
   const { spinnerName } = router.query; // Get the spinner name from the URL
-
-  console.log(router.query.spinnerName);
 
   // Define your spinners based on names
   const spinners = {
@@ -43,7 +41,7 @@ const SpinnerPage = () => {
   const { Component, initialValues } = spinner;
 
   return (
-    <div >
+    <div className={styles.container}>
       <h1>{spinnerName.replace(/_/g, ' ').toUpperCase()} Spinner</h1>
       <Component initialValues={initialValues} />
       {/* Add any other relevant content or forms here */}
