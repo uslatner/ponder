@@ -12,10 +12,10 @@ export default function Home() {
       <h1>Spinners</h1>
       <ul>
         <li>
-          <Link href="/spinners/circularspinner">Circular Spinner</Link>
+          <a href="/spinners/circularspinner">Circular Spinner</a>
         </li>
         <li>
-          <Link href="/spinners/dotspinner">Dot Spinner</Link>
+          <a href="/spinners/dotspinner">Dot Spinner</a>
         </li>
         {/* Add more links as needed */}
       </ul>
