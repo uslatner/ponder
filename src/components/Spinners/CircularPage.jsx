@@ -81,6 +81,12 @@ const CircularPage = ({ initialValues }) => {
       <div className={styles.rightSide}>
         <h1>Circular Spinner</h1>
         <p>Short description of the spinner goes here.</p>
+
+        <p className={styles.generatedPropsContainer}>{copiedCode}</p>
+        <button className={styles.copyButton} onClick={handleCopyComponent}>
+          {copyButtonText} {/* Show current button text */}
+        </button>
+
         <form className={styles.inputField}>
           <div>
             <label>Color 1</label>
@@ -143,12 +149,6 @@ const CircularPage = ({ initialValues }) => {
             />
           </div>
         </form>
-
-        {/* Copy button and generated code */}
-        <button className={styles.copyButton} onClick={handleCopyComponent}>
-          {copyButtonText} {/* Show current button text */}
-        </button>
-        <p className={styles.generatedPropsContainer}>{copiedCode}</p>
 
         <div>
           <Link href={`/`}>

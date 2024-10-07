@@ -15,8 +15,8 @@ const SpinnerPage = () => {
     circularspinner: {
       Component: CircularPage,
       initialValues: {
-        color1: "pink",
-        color2: "red",
+        color1: "#FF6F61",
+        color2: "#FF6F61",
         opacity1: 0.5,
         opacity2: 1,
         direction: "-360deg",
