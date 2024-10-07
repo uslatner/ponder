@@ -7,52 +7,80 @@ import Link from "next/link";
 
 const CircularPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
-  const [copiedCode, setCopiedCode] = useState(''); // Initialize copiedCode state
+  const [copiedCode, setCopiedCode] = useState(
+    `<CircularSpinner 
+      color1="${initialValues.color1}" 
+      color2="${initialValues.color2}" 
+      direction="${initialValues.direction}" 
+      opacity1="${initialValues.opacity1}" 
+      opacity2="${initialValues.opacity2}" 
+      speed="${initialValues.speed}" 
+    />`
+  );
+  
+  const [copyButtonText, setCopyButtonText] = useState("Copy Code"); // State for button text
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
+    setFormValues((prevValues) => {
+      const updatedValues = { ...prevValues, [name]: value };
+      // Dynamically update the code whenever the form changes
+      setCopiedCode(`<CircularSpinner 
+        color1="${updatedValues.color1}" 
+        color2="${updatedValues.color2}" 
+        direction="${updatedValues.direction}" 
+        opacity1="${updatedValues.opacity1}" 
+        opacity2="${updatedValues.opacity2}" 
+        speed="${updatedValues.speed}" 
+      />`);
+      return updatedValues;
+    });
   };
 
   const handleCopyComponent = () => {
-    const componentString = `<CircularSpinner 
-      color1="${formValues.color1}" 
-      color2="${formValues.color2}" 
-      direction="${formValues.direction}" 
-      opacity1="${formValues.opacity1}" 
-      opacity2="${formValues.opacity2}" 
-      speed="${formValues.speed}" 
-    />`;
-    setCopiedCode(componentString); // Set the component string to copiedCode
-    navigator.clipboard.writeText(componentString); // Copy to clipboard
+    navigator.clipboard.writeText(copiedCode); // Copy to clipboard
+    setCopyButtonText("Copied"); // Change button text to 'Copied'
+    
+    // Reset button text after 2 seconds
+    setTimeout(() => {
+      setCopyButtonText("Copy Code");
+    }, 2000);
   };
 
   return (
     <div className={styles.container}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src={cloudwneck01}
-          alt="Oblak Background"
-          className={styles.oblakImage}
-          layout="responsive"
-          width={150}
-          height={150}
-        />
-        <div className={styles.spinnerComponent}>
-          <CircularSpinner
-            color1={formValues.color1}
-            color2={formValues.color2}
-            direction={formValues.direction}
-            opacity1={formValues.opacity1}
-            opacity2={formValues.opacity2}
-            speed={formValues.speed}
+      {/* Left side (Spinner and buttons) */}
+      <div className={styles.leftSide}>
+        <div className={styles.spinnerWrapper}>
+          <Image
+            src={cloudwneck01}
+            alt="Oblak Background"
+            className={styles.oblakImage}
+            layout="responsive"
+            width={150}
+            height={150}
           />
+          <div className={styles.spinnerComponent}>
+            <CircularSpinner
+              color1={formValues.color1}
+              color2={formValues.color2}
+              direction={formValues.direction}
+              opacity1={formValues.opacity1}
+              opacity2={formValues.opacity2}
+              speed={formValues.speed}
+            />
+          </div>
+        </div>
+        <div className={styles.navButtons}>
+          <button>Prev</button>
+          <button>Next</button>
         </div>
       </div>
-      <div className={styles.form}>
+
+      {/* Right side (Name, description, code, and form) */}
+      <div className={styles.rightSide}>
+        <h1>Circular Spinner</h1>
+        <p>Short description of the spinner goes here.</p>
         <form className={styles.inputField}>
           <div>
             <label>Color 1</label>
@@ -114,13 +142,14 @@ const CircularPage = ({ initialValues }) => {
               value={formValues.speed}
             />
           </div>
-          <button type="button" onClick={handleCopyComponent}>
-            Generate your props
-          </button>
         </form>
-        {copiedCode && (
-          <p className={styles.generatedPropsContainer}>{copiedCode}</p>
-        )}
+
+        {/* Copy button and generated code */}
+        <button className={styles.copyButton} onClick={handleCopyComponent}>
+          {copyButtonText} {/* Show current button text */}
+        </button>
+        <p className={styles.generatedPropsContainer}>{copiedCode}</p>
+
         <div>
           <Link href={`/`}>
             <button>Back</button>
@@ -129,6 +158,6 @@ const CircularPage = ({ initialValues }) => {
       </div>
     </div>
   );
-}
+};
 
 export default CircularPage;

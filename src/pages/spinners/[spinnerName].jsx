@@ -15,8 +15,8 @@ const SpinnerPage = () => {
     circularspinner: {
       Component: CircularPage,
       initialValues: {
-        color1: "blue",
-        color2: "green",
+        color1: "pink",
+        color2: "red",
         opacity1: 0.5,
         opacity2: 1,
         direction: "-360deg",
@@ -56,7 +56,6 @@ const SpinnerPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1>{spinnerName.replace(/_/g, ' ').toUpperCase()} Spinner</h1>
       <Component initialValues={initialValues} />
     </div>
   );
