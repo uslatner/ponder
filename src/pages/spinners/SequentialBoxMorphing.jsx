@@ -43,3 +43,5 @@ export const SequentialBoxMorphing = ({
     </Container>
   );
 };
+
+export default SequentialBoxMorphing;

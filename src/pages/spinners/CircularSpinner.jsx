@@ -72,3 +72,5 @@ CircularSpinner.propTypes = {
 };
 
 // styled-components
+
+export default CircularSpinner;

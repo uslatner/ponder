@@ -59,3 +59,5 @@ DotSpinner.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string),
   duration: PropTypes.string,
 };
+
+export default DotSpinner;

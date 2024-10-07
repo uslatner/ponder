@@ -77,3 +77,5 @@ Wave.propTypes = {
   opacity: PropTypes.number,
   speed: PropTypes.string,
 };
+
+export default Wave;
