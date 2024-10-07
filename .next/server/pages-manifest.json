@@ -1,7 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/spinners/[spinnerName]": "pages/spinners/[spinnerName].js"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }
