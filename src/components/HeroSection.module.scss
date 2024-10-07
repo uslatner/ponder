@@ -32,12 +32,11 @@
 }
 .imgBtn {
   text-decoration: none;
-  font-size: $font-size-large;
+  font-size: $font-size-normal;
   color: $primary-brand-colour;
-  font-size: 1.1rem;
   font-weight: $font-weight-bold;
   background-color: $background-colour;
-  border: 5px solid $primary-brand-colour;
+  border: 3px solid $primary-brand-colour;
   padding: 10px 50px;
   border-radius: 2rem;
   transition: background-color 0.3s ease;
@@ -46,12 +45,11 @@
 
   &:hover {
     background-color: $primary-brand-colour;
-    border: 5px solid $primary-brand-colour;
+    border: 3px solid $primary-brand-colour;
     color: $background-colour;
   }
 }
 .heroImg {
-  width: 80vw;
   height: 80vh;
   object-fit: contain;
   position: relative;
@@ -68,8 +66,8 @@
   font-size: 1.1rem;
   font-weight: $font-weight-bold;
   background-color: $background-colour;
-  border: 5px solid $primary-brand-colour;
-  padding: 10px 50px;
+  border: 3px solid $primary-brand-colour;
+  padding: 7px 50px;
   border-radius: 2rem;
   transition: background-color 0.3s ease;
   margin-top: 2rem;
