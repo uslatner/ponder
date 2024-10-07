@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { CircularSpinner } from "./CircularSpinner";
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import Link from "next/link";
+import Layout from "../../components/Layout";
 
 function CircularPage() {
   const [formValues, setFormValues] = useState({
