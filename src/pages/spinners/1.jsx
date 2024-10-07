@@ -1,16 +1,14 @@
-import Image from "next/image"; // Import Image from Next.js
+// pages/spinners/1.js or CircularPage.js
+import Image from "next/image";
 import styles from "./1.module.scss";
-
 import React, { useState } from "react";
 import { CircularSpinner } from "./CircularSpinner";
-
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import Link from "next/link";
 
 function CircularPage() {
   const [formValues, setFormValues] = useState({
     color1: "blue",
-
     color2: "green",
     opacity1: 0.5,
     opacity2: 1,
@@ -18,28 +16,25 @@ function CircularPage() {
     speed: "1s",
   });
   const [copiedCode, setCopiedCode] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues((prevValues) => {
-      return {
-        ...prevValues,
-        [name]: value,
-      };
-    });
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
   };
 
   const handleCopyComponent = () => {
     const componentString = `<CircularSpinner 
       color1="${formValues.color1}" 
       color2="${formValues.color2}" 
-      
       direction="${formValues.direction}" 
       opacity1="${formValues.opacity1}" 
       opacity2="${formValues.opacity2}" 
       speed="${formValues.speed}" 
     />`;
     setCopiedCode(componentString);
-
     navigator.clipboard.writeText(componentString);
   };
 
@@ -77,7 +72,6 @@ function CircularPage() {
               value={formValues.color1}
             />
           </div>
-
           <div>
             <label>Color 2</label>
             <input
@@ -90,7 +84,6 @@ function CircularPage() {
           </div>
           <div>
             <label>Opacity 1</label>
-
             <input
               type="text"
               name="opacity1"
@@ -109,7 +102,6 @@ function CircularPage() {
               value={formValues.opacity2}
             />
           </div>
-
           <div>
             <label>Direction</label>
             <input
@@ -130,7 +122,7 @@ function CircularPage() {
               value={formValues.speed}
             />
           </div>
-          <button type="button" onClick={() => handleCopyComponent()}>
+          <button type="button" onClick={handleCopyComponent}>
             Generate your props
           </button>
         </form>
