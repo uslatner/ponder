@@ -20,10 +20,10 @@
 }
 
 .imageContainerSpinner {
-    position: relative;
-    width: 35%;
-    height: 100%;
-  }
+  position: relative;
+  width: 35%;
+  height: 100%;
+}
 
 .imageWrapper {
   position: relative;
@@ -48,6 +48,16 @@
     width: 35% !important; /* Reduce the size of the spinner image */
     height: auto; /* Maintain aspect ratio */
   }
+
+  .spinnerComponent {
+    position: absolute; /* Ensure it overlays correctly */
+    top: 63%; /* Adjust this if necessary to align with the previous image */
+    left: 56%;
+    transform: translate(-50%, -50%); /* Center the SpinnerComponent */
+    z-index: 2; /* Make sure it's in front of the background image */
+    width: 35% !important; /* Use the same size as .spinnerImage */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 .spinnerText {
@@ -57,5 +67,3 @@
   text-align: center; /* Center text */
   z-index: 3; /* Make sure text is on top */
 }
-
-

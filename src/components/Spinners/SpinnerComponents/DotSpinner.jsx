@@ -31,14 +31,14 @@ const StyledCircle = styled.circle`
   }
 `;
 //delay between each child
-export function DotSpinner({ colors = ["blue", "#EAE0D5", "#C6AC8F"] }) {
+export function DotSpinner({ colors = ["#22333B", "#FF6F61", "#B7AEA3"] }) {
   const dots = Array.from({ length: colors.length });
 
   return (
     <StyledSVG
       xmlns="http://www.w3.org/2000/svg"
-      width="100"
-      height="100"
+      width="150"
+      height="150"
       viewBox="0 0 100 100"
       fill="none"
     >

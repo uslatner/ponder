@@ -22,6 +22,11 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+const ScaledContainer = styled.div`
+  transform: scale(0.5); /* Adjust this scale value to change size */
+  transform-origin: center; /* Scale from the center */
+`;
+
 export const Box = styled.div`
   width: 100px;
   height: 100px;
@@ -32,15 +37,17 @@ export const Box = styled.div`
 `;
 
 export const SequentialBoxMorphing = ({
-  colors = ["#2f3e46", "#e0e0e0", "#6b6252", "#ccb69b"],
+  colors = ["#22333B", "#FF6F61", "#ffa9a1", "#22333B"],
 }) => {
   return (
-    <Container>
-      <Box color={colors[0]} delay="0s" />
-      <Box color={colors[1]} delay="1s" />
-      <Box color={colors[2]} delay="3s" />
-      <Box color={colors[3]} delay="2s" />
-    </Container>
+    <ScaledContainer>
+      <Container>
+        <Box color={colors[0]} delay="0s" />
+        <Box color={colors[1]} delay="1s" />
+        <Box color={colors[2]} delay="3s" />
+        <Box color={colors[3]} delay="2s" />
+      </Container>
+    </ScaledContainer>
   );
 };
 

@@ -9,13 +9,16 @@ import Image from "next/image";
 
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import cloudwneck02 from "../../assets/cloudwneck02.svg";
-import dot from "../../assets/dot.gif";
-import spinnerR from "../../assets/spinnerR.gif";
+
+import CircularSpinner from '../Spinners/SpinnerComponents/CircularSpinner';
+import DotSpinner from '../Spinners/SpinnerComponents/DotSpinner';
+import SequentialBoxMorphing from '../Spinners/SpinnerComponents/SequentialBoxMorphing';
+import Wave from '../Spinners/SpinnerComponents/Wave'
 
 export const spinnersData = [
   {
     id: 1,
-    imageSrc: spinnerR,
+    SpinnerComponent: CircularSpinner,
     altText: "Spinner 1",
     text: "Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.",
     cloudImageSrc: cloudwneck01,
@@ -23,7 +26,7 @@ export const spinnersData = [
   },
   {
     id: 2,
-    imageSrc: dot,
+    SpinnerComponent: DotSpinner,
     altText: "Spinner 2",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
     cloudImageSrc: cloudwneck02,
@@ -31,15 +34,15 @@ export const spinnersData = [
   },
   {
     id: 3,
-    imageSrc: dot,
+    SpinnerComponent: SequentialBoxMorphing,
     altText: "Spinner 4",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
     cloudImageSrc: cloudwneck02,
     link: "/spinners/seqboxmorph",
   },
   {
-    id: 3,
-    imageSrc: dot,
+    id: 4,
+    SpinnerComponent: Wave,
     altText: "Spinner 4",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
     cloudImageSrc: cloudwneck02,

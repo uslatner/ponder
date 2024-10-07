@@ -1,8 +1,9 @@
+// components/Loaders/Loader.jsx
 import React from "react";
 import Image from "next/image"; // Import Image from Next.js
 import styles from "./Loader.module.scss"; // Adjust path as necessary
 
-const Loader = ({ imageSrc, altText, text, cloudImageSrc }) => {
+const Loader = ({ SpinnerComponent, cloudImageSrc, text }) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -15,14 +16,12 @@ const Loader = ({ imageSrc, altText, text, cloudImageSrc }) => {
           height={150}
         />
 
-        <Image
-          src={imageSrc}
-          alt={altText}
-          className={styles.spinnerImage}
-          layout="responsive"
-          width={50}
-          height={50}
-        />
+        {/* Render the SpinnerComponent with the new class */}
+        {SpinnerComponent && (
+          <div className={styles.spinnerComponent}>
+            <SpinnerComponent />
+          </div>
+        )}
       </div>
 
       <div className={styles.form}>
