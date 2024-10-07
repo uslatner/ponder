@@ -1,0 +1,52 @@
+// pages/spinners/[name].jsx
+import { useRouter } from "next/router";
+import CircularSpinner from "../../components/Spinners/CircularSpinner"; // Adjust the path as needed
+import DotSpinner from "../../components/Spinners/DotSpinner"; // Adjust the path as needed
+
+import styles from "./[name].module.scss"; // You can use a common stylesheet or separate ones
+
+const SpinnerPage = () => {
+  const router = useRouter();
+  const { name } = router.query; // Get the spinner name from the URL
+
+  // Define your spinners based on names
+  const spinners = {
+    circularspinner: {
+      Component: CircularSpinner,
+      initialValues: {
+        color1: "blue",
+        color2: "green",
+        opacity1: 0.5,
+        opacity2: 1,
+        direction: "-360deg",
+        speed: "1s",
+      },
+    },
+    dotspinner: {
+      Component: DotSpinner,
+      initialValues: {
+        colors: ["blue", "#EAE0D5", "#C6AC8F"],
+      },
+    },
+    // Add more spinners as needed
+  };
+
+  // Get the current spinner based on the name
+  const spinner = spinners[name.toLowerCase()]; // Convert to lowercase for matching
+
+  if (!spinner) {
+    return <div>Spinner not found</div>; // Handle case for invalid name
+  }
+
+  const { Component, initialValues } = spinner;
+
+  return (
+    <div className={styles.container}>
+      <h1>{name.replace(/_/g, ' ').toUpperCase()} Spinner</h1>
+      <Component initialValues={initialValues} />
+      {/* Add any other relevant content or forms here */}
+    </div>
+  );
+};
+
+export default SpinnerPage;

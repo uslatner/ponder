@@ -6,16 +6,8 @@ import { CircularSpinner } from "./CircularSpinner";
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import Link from "next/link";
 
-function CircularPage() {
-  const [formValues, setFormValues] = useState({
-    color1: "blue",
-    color2: "green",
-    opacity1: 0.5,
-    opacity2: 1,
-    direction: "-360deg",
-    speed: "1s",
-  });
-  const [copiedCode, setCopiedCode] = useState("");
+const CircularSpinner = ({ initialValues }) => {
+    const [formValues, setFormValues] = useState(initialValues);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -115,11 +107,10 @@ function CircularPage() {
           <div>
             <label>Speed</label>
             <input
-              type="text"
-              name="speed"
-              placeholder="speed"
-              onChange={handleChange}
-              value={formValues.speed}
+                type="text"
+                name="color1"
+                value={formValues.color1}
+                onChange={handleChange}
             />
           </div>
           <button type="button" onClick={handleCopyComponent}>
