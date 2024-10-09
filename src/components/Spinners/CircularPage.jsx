@@ -38,8 +38,8 @@ const CircularPage = ({ initialValues }) => {
   };
 
   const handleCopyComponent = () => {
-    navigator.clipboard.writeText(copiedCode); // Copy to clipboard
-    setCopyButtonText("Copied"); // Change button text to 'Copied'
+    navigator.clipboard.writeText(copiedCode);
+    setCopyButtonText("Copied");
     
     // Reset button text after 2 seconds
     setTimeout(() => {
