@@ -55,7 +55,7 @@ const SpinnerPage = () => {
   const { Component, initialValues } = spinner;
 
   return (
-    <div className={styles.container}>
+    <div>
       <Component initialValues={initialValues} />
     </div>
   );
