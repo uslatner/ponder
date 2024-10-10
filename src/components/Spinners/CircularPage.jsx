@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from "./CircularPage.module.scss";
 import CircularHead from "../SpinnerHeads/CircularHead";
-import CopyBtn from "../common/copyBtn"; // Import the CopyButton component
+import CopyBtn from "../common/copyBtn";
 import Link from 'next/link';
 
 const CircularPage = ({ initialValues }) => {

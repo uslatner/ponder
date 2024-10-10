@@ -6,7 +6,7 @@ import styles from "./DotHead.module.scss";
 import cloudneck02 from '../../assets/cloudwneck02.svg';
 import DotSpinner from "../Spinners/SpinnerComponents/DotSpinner";
 
-const DotHead = () => {
+const DotHead = ( {colors} ) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -22,7 +22,9 @@ const DotHead = () => {
         {/* Render the SpinnerComponent with the new class */}
         {DotSpinner && (
           <div className={styles.spinnerComponent}>
-            <DotSpinner />
+            <DotSpinner 
+              colors={colors}
+            />
           </div>
         )}
       </div>
