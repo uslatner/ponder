@@ -6,7 +6,8 @@ import styles from "./WaveHead.module.scss";
 import cloudneck01 from '../../assets/cloudwneck01.svg';
 import Wave from "../Spinners/SpinnerComponents/Wave";
 
-const WaveHead = () => {
+const WaveHead = ( {colors, size, opacity, speed}) => {
+
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -19,10 +20,15 @@ const WaveHead = () => {
           height={150}
         />
 
-        {/* Render the SpinnerComponent with the new class */}
+
         {Wave && (
           <div className={styles.spinnerComponent}>
-            <Wave />
+            <Wave 
+              color={colors}
+              size={size}
+              opacity={opacity}
+              speed={speed}
+            />
           </div>
         )}
       </div>
