@@ -105,5 +105,8 @@
   .npmText {
     font-size: $font-size-normal;
     color: $background-colour;
+
+    white-space: pre-wrap;
+    font-family: monospace;
   }
 }
