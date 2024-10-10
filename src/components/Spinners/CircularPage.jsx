@@ -11,12 +11,12 @@ const CircularPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
   const [copiedCode, setCopiedCode] = useState(
     `<CircularSpinner 
-      color1="${initialValues.color1}" 
-      color2="${initialValues.color2}" 
-      direction="${initialValues.direction}" 
-      opacity1="${initialValues.opacity1}" 
-      opacity2="${initialValues.opacity2}" 
-      speed="${initialValues.speed}" 
+        color1="${initialValues.color1}" 
+        color2="${initialValues.color2}" 
+        direction="${initialValues.direction}" 
+        opacity1="${initialValues.opacity1}" 
+        opacity2="${initialValues.opacity2}" 
+        speed="${initialValues.speed}" 
     />`
   );
   
@@ -27,7 +27,7 @@ const CircularPage = ({ initialValues }) => {
     setFormValues((prevValues) => {
       const updatedValues = { ...prevValues, [name]: value };
       // Dynamically update the code whenever the form changes
-      setCopiedCode(`< CircularSpinner 
+      setCopiedCode(`<CircularSpinner 
         color1="${updatedValues.color1}" 
         color2="${updatedValues.color2}" 
         direction="${updatedValues.direction}" 
