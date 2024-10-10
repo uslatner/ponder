@@ -52,11 +52,13 @@ const CircularPage = ({ initialValues }) => {
           </p>
         </div>
         <div className={styles.navButtons}>
-          <button>Prev</button>
+          <button className={styles.disabled}>Prev</button>
           <Link href={`/`}>
-            <button>Back</button>
+            <button className={styles.pageBtn}>Back</button>
           </Link>
-          <button>Next</button>
+          <Link href={'/spinners/dotspinner'}>
+            <button className={styles.pageBtn}>Next</button>
+          </Link>
         </div>
       </div>
 

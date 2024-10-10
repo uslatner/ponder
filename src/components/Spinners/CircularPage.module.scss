@@ -11,6 +11,7 @@
   max-width: 1400px;
   margin: 0 auto;
   border-radius: 4rem;
+  margin-bottom: 2rem;
 }
 
 .leftSide {
@@ -25,20 +26,27 @@
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
-  width: 200px;
 
   button {
     padding: 10px 20px;
-    border: 1px solid $primary-brand-colour;
-    background-color: $background-colour;
-    color: $primary-brand-colour;
-    border-radius: 5px;
+    border: 3px solid $background-colour;
+    background-color: $primary-brand-colour;
+    color: $background-colour;
+    border-radius: 2rem;
     cursor: pointer;
+    margin: 0 1rem;
 
     &:hover {
-      background-color: $primary-brand-colour;
-      color: $background-colour;
+      background-color: $background-colour;
+      color: $primary-brand-colour;
+      border: 3px solid $primary-brand-colour;
     }
+
+    &.disabled {
+        opacity: 30%;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
   }
 }
 
@@ -48,6 +56,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+    h1 {
+        padding-bottom: 0rem;
+    }
 
   p {
     font-size: $font-size-normal;
@@ -95,7 +107,7 @@
     }
   
     .input {
-      width: 25%; /* Adjust width as needed for left-aligned input */
+      width: 25%;
       color: $background-colour;
       border: 2px solid $background-colour;
       background-color: $primary-brand-colour;
@@ -103,9 +115,14 @@
       padding: 7px 15px;
 
       &:focus {
-        background-color: lighten($primary-brand-colour, 10%); // Adjust to the color you want on focus
-        outline: none; // Remove the default browser outline
-        border-color: $background-colour; // Optional: change the border color on focus
+        background-color: lighten($primary-brand-colour, 10%);
+        outline: none;
+        border-color: $background-colour;
+      }
+
+      &:hover {
+        background-color: lighten($primary-brand-colour, 10%);
+        cursor: pointer;
       }
     }
   }
@@ -125,3 +142,28 @@
 .copyButton:hover {
   background-color: #005bb5;
 }
+
+.pageBtn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    font-size: $font-size-normal;
+    color: $background-colour;
+    font-weight: $font-weight-bold;
+    background-color: $primary-brand-colour;
+    border: 3px solid $background-colour;
+    padding: 7px 50px;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+  
+    &:hover {
+      background-color: $background-colour;
+      border: 3px solid $background-colour;
+      color: $primary-brand-colour;
+      text-decoration: none;
+    }
+  }
