@@ -51,7 +51,7 @@
 
   p {
     font-size: $font-size-normal;
-    margin-bottom: 2rem;
+    padding-bottom: 0rem !important;
   }
 
   h2 {
@@ -62,13 +62,18 @@
 .generatedPropsContainer {
   background-color: $background-colour;
   color: $primary-brand-colour;
-  min-height: 200px;
   overflow: auto;
   border-radius: 1.5rem;
   padding: 1.5rem;
+  margin-bottom: 2rem;
 
   white-space: pre-wrap;
   font-family: monospace;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .form {

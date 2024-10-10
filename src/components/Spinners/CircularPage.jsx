@@ -1,11 +1,8 @@
-import Image from "next/image";
+import React, { useState } from 'react';
 import styles from "./CircularPage.module.scss";
-import React, { useState } from "react";
-import { CircularSpinner } from "./SpinnerComponents/CircularSpinner";
-import cloudwneck01 from "../../assets/cloudwneck01.svg";
-import Link from "next/link";
-
 import CircularHead from "../SpinnerHeads/CircularHead";
+import CopyBtn from "../common/copyBtn"; // Import the CopyButton component
+import Link from 'next/link';
 
 const CircularPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
@@ -19,8 +16,6 @@ const CircularPage = ({ initialValues }) => {
         speed="${initialValues.speed}" 
     />`
   );
-  
-  const [copyButtonText, setCopyButtonText] = useState("Copy Code"); // State for button text
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,33 +34,22 @@ const CircularPage = ({ initialValues }) => {
     });
   };
 
-  const handleCopyComponent = () => {
-    navigator.clipboard.writeText(copiedCode);
-    setCopyButtonText("Copied");
-    
-    // Reset button text after 2 seconds
-    setTimeout(() => {
-      setCopyButtonText("Copy Code");
-    }, 2000);
-  };
-
   return (
     <div className={styles.container}>
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          
-          <CircularHead 
-              color1={formValues.color1}
-              color2={formValues.color2}
-              direction={formValues.direction}
-              opacity1={formValues.opacity1}
-              opacity2={formValues.opacity2}
-              speed={formValues.speed}
+          <CircularHead
+            color1={formValues.color1}
+            color2={formValues.color2}
+            direction={formValues.direction}
+            opacity1={formValues.opacity1}
+            opacity2={formValues.opacity2}
+            speed={formValues.speed}
           />
-
-          <p className={styles.spinnerText}>Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.</p>
-
+          <p className={styles.spinnerText}>
+            Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.
+          </p>
         </div>
         <div className={styles.navButtons}>
           <button>Prev</button>
@@ -76,12 +60,12 @@ const CircularPage = ({ initialValues }) => {
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
         <h1>CIRCULAR SPINNER</h1>
-        <h2>ELEGANCE IN MOTION,<br/>LIKE A BALLET DANCER TWIRLING.</h2>
+        <h2>ELEGANCE IN MOTION,<br />LIKE A BALLET DANCER TWIRLING.</h2>
 
-        <p className={styles.generatedPropsContainer}>{copiedCode}</p>
-        <button className={styles.copyButton} onClick={handleCopyComponent}>
-          {copyButtonText} {/* Show current button text */}
-        </button>
+        <div className={styles.generatedPropsContainer}>
+          <p>{copiedCode}</p>
+          <CopyBtn textToCopy={copiedCode} />
+        </div>
 
         <form className={styles.inputField}>
           <div>
