@@ -10,8 +10,7 @@ const SpinnersGrid = ({ spinners }) => {
       {spinners.map((spinner, index) => (
         <div key={index}> {/* Move key here for the outer div */}
           <Loader
-            SpinnerComponent={spinner.SpinnerComponent} // Pass the SpinnerComponent
-            cloudImageSrc={spinner.cloudImageSrc}
+            SpinnerComponent={spinner.SpinnerComponent}
             text={spinner.text}
           />
           <Link href={spinner.link}>

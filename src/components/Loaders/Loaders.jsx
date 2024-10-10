@@ -5,47 +5,39 @@ import styles from "./Loaders.module.scss";
 import logoLine from "../../assets/logoLine.svg";
 import Image from "next/image";
 
-// Import spinners and images
-
-import cloudwneck01 from "../../assets/cloudwneck01.svg";
-import cloudwneck02 from "../../assets/cloudwneck02.svg";
-
-import CircularSpinner from '../Spinners/SpinnerComponents/CircularSpinner';
-import DotSpinner from '../Spinners/SpinnerComponents/DotSpinner';
-import SequentialBoxMorphing from '../Spinners/SpinnerComponents/SequentialBoxMorphing';
-import Wave from '../Spinners/SpinnerComponents/Wave'
+// Import spinner heads
+import CircularHead from "../SpinnerHeads/CircularHead";
+import DotHead from "../SpinnerHeads/DotHead";
+import BoxHead from "../SpinnerHeads/BoxHead";
+import WaveHead from "../SpinnerHeads/WaveHead";
 
 export const spinnersData = [
   {
     id: 1,
-    SpinnerComponent: CircularSpinner,
+    SpinnerComponent: CircularHead,
     altText: "Spinner 1",
     text: "Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.",
-    cloudImageSrc: cloudwneck01,
     link: "/spinners/circularspinner",
   },
   {
     id: 2,
-    SpinnerComponent: DotSpinner,
+    SpinnerComponent: DotHead,
     altText: "Spinner 2",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
-    cloudImageSrc: cloudwneck02,
     link: "/spinners/dotspinner",
   },
   {
     id: 3,
-    SpinnerComponent: SequentialBoxMorphing,
+    SpinnerComponent: BoxHead,
     altText: "Spinner 4",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
-    cloudImageSrc: cloudwneck02,
     link: "/spinners/seqboxmorph",
   },
   {
     id: 4,
-    SpinnerComponent: Wave,
+    SpinnerComponent: WaveHead,
     altText: "Spinner 4",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
-    cloudImageSrc: cloudwneck02,
     link: "/spinners/wavespinner",
   },
 ];
