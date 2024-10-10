@@ -80,12 +80,36 @@
   display: flex;
   flex-direction: column;
 
-  .inputField {
-    min-height: 40px;
-    padding: 5px;
-    margin: 10px 0;
-  }
 }
+
+.inputField {
+    display: flex;
+    align-items: center; /* Centers the label and input vertically */
+    margin-bottom: 0.7rem;
+    margin-left: 1.5rem;
+  
+    label {
+      width: 30%; /* Adjust width as needed for right-aligned label */
+      text-align: right; /* Align label text to the right */
+      padding-right: 1rem; /* Optional: Adds space between label and input */
+    }
+  
+    .input {
+      width: 25%; /* Adjust width as needed for left-aligned input */
+      color: $background-colour;
+      border: 2px solid $background-colour;
+      background-color: $primary-brand-colour;
+      border-radius: 1rem;
+      padding: 7px 15px;
+
+      &:focus {
+        background-color: lighten($primary-brand-colour, 10%); // Adjust to the color you want on focus
+        outline: none; // Remove the default browser outline
+        border-color: $background-colour; // Optional: change the border color on focus
+      }
+    }
+  }
+  
 
 .copyButton {
   background-color: #0070f3;

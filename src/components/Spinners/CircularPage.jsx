@@ -53,6 +53,9 @@ const CircularPage = ({ initialValues }) => {
         </div>
         <div className={styles.navButtons}>
           <button>Prev</button>
+          <Link href={`/`}>
+            <button>Back</button>
+          </Link>
           <button>Next</button>
         </div>
       </div>
@@ -67,10 +70,10 @@ const CircularPage = ({ initialValues }) => {
           <CopyBtn textToCopy={copiedCode} />
         </div>
 
-        <form className={styles.inputField}>
-          <div>
-            <label>Color 1</label>
-            <input
+        <form>
+          <div className={styles.inputField}>
+            <label>Color 1: </label>
+            <input className={styles.input}
               type="text"
               name="color1"
               placeholder="color1"
@@ -78,9 +81,9 @@ const CircularPage = ({ initialValues }) => {
               value={formValues.color1}
             />
           </div>
-          <div>
-            <label>Color 2</label>
-            <input
+          <div className={styles.inputField}>
+            <label>Color 2: </label>
+            <input className={styles.input}
               type="text"
               name="color2"
               placeholder="color2"
@@ -88,9 +91,9 @@ const CircularPage = ({ initialValues }) => {
               value={formValues.color2}
             />
           </div>
-          <div>
-            <label>Opacity 1</label>
-            <input
+          <div className={styles.inputField}>
+            <label>Opacity 1: </label>
+            <input className={styles.input}
               type="text"
               name="opacity1"
               placeholder="opacity1"
@@ -98,9 +101,9 @@ const CircularPage = ({ initialValues }) => {
               value={formValues.opacity1}
             />
           </div>
-          <div>
-            <label>Opacity 2</label>
-            <input
+          <div className={styles.inputField}>
+            <label>Opacity 2: </label>
+            <input className={styles.input}
               type="text"
               name="opacity2"
               placeholder="opacity2"
@@ -108,9 +111,9 @@ const CircularPage = ({ initialValues }) => {
               value={formValues.opacity2}
             />
           </div>
-          <div>
-            <label>Direction</label>
-            <input
+          <div className={styles.inputField}>
+            <label>Direction: </label>
+            <input className={styles.input}
               type="text"
               name="direction"
               placeholder="direction"
@@ -118,9 +121,9 @@ const CircularPage = ({ initialValues }) => {
               value={formValues.direction}
             />
           </div>
-          <div>
-            <label>Speed</label>
-            <input
+          <div className={styles.inputField}>
+            <label>Speed: </label>
+            <input className={styles.input}
               type="text"
               name="speed"
               placeholder="speed"
@@ -129,12 +132,6 @@ const CircularPage = ({ initialValues }) => {
             />
           </div>
         </form>
-
-        <div>
-          <Link href={`/`}>
-            <button>Back</button>
-          </Link>
-        </div>
       </div>
     </div>
   );

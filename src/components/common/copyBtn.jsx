@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import copyIcon from '../../assets/copyDark.svg';
 import copiedIcon from '../../assets/copiedDark.svg';
-import styles from './copyBtn.module.scss'; // Optional: You can style it separately
+import styles from './copyBtn.module.scss';
 
 const CopyBtn = ({ textToCopy }) => {
   const [isCopied, setIsCopied] = useState(false);
