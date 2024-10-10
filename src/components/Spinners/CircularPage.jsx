@@ -1,9 +1,11 @@
 import Image from "next/image";
-import styles from "../../pages/spinners/1.module.scss";
+import styles from "./CircularPage.module.scss";
 import React, { useState } from "react";
 import { CircularSpinner } from "./SpinnerComponents/CircularSpinner";
 import cloudwneck01 from "../../assets/cloudwneck01.svg";
 import Link from "next/link";
+
+import CircularHead from "../SpinnerHeads/CircularHead";
 
 const CircularPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
@@ -25,7 +27,7 @@ const CircularPage = ({ initialValues }) => {
     setFormValues((prevValues) => {
       const updatedValues = { ...prevValues, [name]: value };
       // Dynamically update the code whenever the form changes
-      setCopiedCode(`<CircularSpinner 
+      setCopiedCode(`< CircularSpinner 
         color1="${updatedValues.color1}" 
         color2="${updatedValues.color2}" 
         direction="${updatedValues.direction}" 
@@ -52,24 +54,18 @@ const CircularPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <Image
-            src={cloudwneck01}
-            alt="Oblak Background"
-            className={styles.oblakImage}
-            layout="responsive"
-            width={150}
-            height={150}
-          />
-          <div className={styles.spinnerComponent}>
-            <CircularSpinner
+          
+          <CircularHead 
               color1={formValues.color1}
               color2={formValues.color2}
               direction={formValues.direction}
               opacity1={formValues.opacity1}
               opacity2={formValues.opacity2}
               speed={formValues.speed}
-            />
-          </div>
+          />
+
+          <p className={styles.spinnerText}>Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.</p>
+
         </div>
         <div className={styles.navButtons}>
           <button>Prev</button>
@@ -79,8 +75,8 @@ const CircularPage = ({ initialValues }) => {
 
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
-        <h1>Circular Spinner</h1>
-        <p>Short description of the spinner goes here.</p>
+        <h1>CIRCULAR SPINNER</h1>
+        <h2>ELEGANCE IN MOTION,<br/>LIKE A BALLET DANCER TWIRLING.</h2>
 
         <p className={styles.generatedPropsContainer}>{copiedCode}</p>
         <button className={styles.copyButton} onClick={handleCopyComponent}>

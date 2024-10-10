@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./DotHead.module.scss";
 
-import cloudneck01 from '../../assets/cloudwneck01.svg';
+import cloudneck02 from '../../assets/cloudwneck02.svg';
 import DotSpinner from "../Spinners/SpinnerComponents/DotSpinner";
 
 const DotHead = () => {
@@ -11,7 +11,7 @@ const DotHead = () => {
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
         <Image
-          src={cloudneck01}
+          src={cloudneck02}
           alt="Oblak Background"
           className={styles.oblakImage}
           layout="responsive"

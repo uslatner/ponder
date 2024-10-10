@@ -6,7 +6,7 @@ import styles from "./CircularHead.module.scss";
 import cloudneck01 from '../../assets/cloudwneck01.svg';
 import CircularSpinner from "../Spinners/SpinnerComponents/CircularSpinner";
 
-const CircularHead = () => {
+const CircularHead = ({ color1, color2, direction, opacity1, opacity2, speed }) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -22,7 +22,14 @@ const CircularHead = () => {
         {/* Render the SpinnerComponent with the new class */}
         {CircularSpinner && (
           <div className={styles.spinnerComponent}>
-            <CircularSpinner />
+            <CircularSpinner 
+              color1={color1}
+              color2={color2}
+              direction={direction}
+              opacity1={opacity1}
+              opacity2={opacity2}
+              speed={speed}
+            />
           </div>
         )}
       </div>
