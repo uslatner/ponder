@@ -6,7 +6,7 @@ import styles from "./BoxHead.module.scss";
 import cloudneck01 from '../../assets/cloudwneck01.svg';
 import SequentialBoxMorphing from "../Spinners/SpinnerComponents/SequentialBoxMorphing";
 
-const BoxHead = () => {
+const BoxHead = ({colors}) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -22,7 +22,8 @@ const BoxHead = () => {
         {/* Render the SpinnerComponent with the new class */}
         {SequentialBoxMorphing && (
           <div className={styles.spinnerComponent}>
-            <SequentialBoxMorphing />
+            <SequentialBoxMorphing 
+              colors={colors}/>
           </div>
         )}
       </div>
