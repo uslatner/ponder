@@ -20,7 +20,7 @@ const SpinnerPage = () => {
         opacity1: 0.5,
         opacity2: 1,
         direction: "-360deg",
-        speed: "1s",
+        speed: "2s",
       },
     },
     dotspinner: {
