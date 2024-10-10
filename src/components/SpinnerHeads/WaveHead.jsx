@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./WaveHead.module.scss";
 
-import cloudneck01 from '../../assets/cloudwneck01.svg';
+import cloudneck04 from '../../assets/cloudneck04.svg';
 import Wave from "../Spinners/SpinnerComponents/Wave";
 
 const WaveHead = ( {colors, size, opacity, speed}) => {
@@ -12,7 +12,7 @@ const WaveHead = ( {colors, size, opacity, speed}) => {
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
         <Image
-          src={cloudneck01}
+          src={cloudneck04}
           alt="Oblak Background"
           className={styles.oblakImage}
           layout="responsive"

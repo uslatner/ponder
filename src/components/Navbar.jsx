@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
-      <Link href="/"> {/* Link to the homepage */}
+      <Link href="/">
           <Image 
             src={logosq} 
             alt="logo" 

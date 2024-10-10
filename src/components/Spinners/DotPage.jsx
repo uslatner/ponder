@@ -57,7 +57,7 @@ const DotPage = ({ initialValues }) => {
 
         <div className={styles.generatedPropsContainer}>
           <p>{copiedCode}</p>
-          <CopyBtn textToCopy={copiedCode} />
+          <CopyBtn textToCopy={copiedCode} theme="dark"/>
         </div>
 
         <form>

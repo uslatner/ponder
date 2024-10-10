@@ -4,6 +4,8 @@ import Image from "next/image";
 import heroPic from "../assets/heroPic.svg";
 import { useState } from "react";
 
+import CopyBtn from "../components/common/copyBtn";
+
 export default function HeroSection() {
   const textToCopy = "npm install Ponder";
   const [isCopied, setIsCopied] = useState(false);
@@ -11,6 +13,10 @@ export default function HeroSection() {
     navigator.clipboard.writeText(textToCopy);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 4000);
+  };
+
+  const scrollToLoaders = () => {
+    document.getElementById("loadersSection").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -34,16 +40,14 @@ export default function HeroSection() {
         </p>
         <div className={styles.buttonWrapper}>
           <div>
-            <a
-              href="https://github.com/DBUG-DINGOES/customised-spinners"
-              className={styles.getStartedBtn}
-            >
-              Get Started
-            </a>
+          <button className={styles.getStartedBtn} onClick={scrollToLoaders}>
+            Get Spinning
+            </button>
           </div>
-          <button className={styles.getStartedBtn} onClick={copyToClipboard}>
-            {isCopied ? "npm install Ponder ✔" : "npm install Ponder"}
-          </button>
+          <div className={styles.copyContainer}>
+            <span className={styles.npmText}>npm install Ponder</span>
+            <CopyBtn textToCopy={textToCopy} theme="light" />
+          </div>
         </div>
       </div>
     </section>

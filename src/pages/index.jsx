@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <Loaders />
+      <div id="loadersSection">
+        <Loaders />
+      </div>
       <CircularSpinner />
     </div>
   );

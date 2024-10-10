@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./BoxHead.module.scss";
 
-import cloudneck01 from '../../assets/cloudwneck01.svg';
+import cloudneck03 from '../../assets/cloudneck03.svg';
 import SequentialBoxMorphing from "../Spinners/SpinnerComponents/SequentialBoxMorphing";
 
 const BoxHead = ({colors}) => {
@@ -11,7 +11,7 @@ const BoxHead = ({colors}) => {
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
         <Image
-          src={cloudneck01}
+          src={cloudneck03}
           alt="Oblak Background"
           className={styles.oblakImage}
           layout="responsive"
