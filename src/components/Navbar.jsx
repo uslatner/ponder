@@ -2,23 +2,25 @@
 import Image from 'next/image';
 import styles from '../components/Navbar.module.scss';
 import logosq from '../assets/logosq.png';
+import Link from 'next/link';
 
 export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
-        <Image 
-          src={logosq} 
-          alt="logo" 
-          fill
-          className={styles.logoImage} 
-        />
+      <Link href="/"> {/* Link to the homepage */}
+          <Image 
+            src={logosq} 
+            alt="logo" 
+            fill
+            className={styles.logoImage} 
+          />
+        </Link>
       </div>
       <div className={styles.links}>
-        <a href="#working-example">Working Example</a>
-        <a href="https://github.com/DBUG-DINGOES/customised-spinners">GitHub</a>
-        <a href="https://github.com/DBUG-DINGOES/customised-spinners">Docs</a>
+        <a href="https://github.com/DBUG-DINGOES/customised-spinners" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/DBUG-DINGOES/customised-spinners" target="_blank" rel="noopener noreferrer">Docs</a>
       </div>
     </nav>
   );

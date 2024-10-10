@@ -26,20 +26,21 @@ const SpinnerPage = () => {
     dotspinner: {
       Component: DotPage,
       initialValues: {
-        colors: ["blue", "#EAE0D5", "#C6AC8F"],
+        colors: ["#22333B", "#FF6F61", "#B7AEA3"],
       },
     },
     seqboxmorph: { // Add Sequential Box Morph spinner
       Component: SeqBoxMorphPage,
       initialValues: {
-        colors: ["#2f3e46", "#e0e0e0", "#6b6252", "#ccb69b"],
+        colors: ["#22333B", "#FF6F61", "#ffa9a1", "#22333B"],
       },
     },
     wavespinner: {
       Component: WavePage,
       initialValues: {
         size: "60",
-        colors: ["pink", "#EAE0D5"],
+        colors: ["#ffa9a1", "#FF6F61"],
+        size: 100,
         opacity: 1,
         speed: "2s",
       },
