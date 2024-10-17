@@ -10,6 +10,7 @@ import CircularHead from "../SpinnerHeads/CircularHead";
 import DotHead from "../SpinnerHeads/DotHead";
 import BoxHead from "../SpinnerHeads/BoxHead";
 import WaveHead from "../SpinnerHeads/WaveHead";
+import DotCirclesHead from '../SpinnerHeads/DotCirclesHead';
 
 export const spinnersData = [
   {
@@ -39,6 +40,13 @@ export const spinnersData = [
     altText: "Spinner 4",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
     link: "/spinners/wavespinner",
+  },
+  {
+    id: 5,
+    SpinnerComponent: DotCirclesHead,
+    altText: "Spinner 5",
+    text: "The Juggling Trio – These three dots aren't just spinning, they're juggling in perfect sync! As they grow, shrink, and twirl, they hold your attention with their rhythmic dance. Whether you're waiting or just watching, this trio turns loading into a mini performance.",
+    link: "/spinners/dotcirclesspinner",
   },
 ];
 
