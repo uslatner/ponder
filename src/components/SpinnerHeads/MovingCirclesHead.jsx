@@ -6,7 +6,7 @@ import styles from "./MovingCirclesHead.module.scss";
 import cloudneck02 from '../../assets/cloudwneck02.svg';
 import MovingCircles from "../Spinners/SpinnerComponents/MovingCircles";
 
-const DotCirclesHead = ( {colors} ) => {
+const MovingCirclesHead = ( {size, color1, color2, color3, duration} ) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -23,7 +23,11 @@ const DotCirclesHead = ( {colors} ) => {
         {MovingCircles && (
           <div className={styles.spinnerComponent}>
             <MovingCircles
-              colors={colors}
+              size = {size}
+              color1 = {color1}
+              color2 = {color2}
+              color3 = {color3}
+              duration = {duration}
             />
           </div>
         )}
@@ -33,4 +37,4 @@ const DotCirclesHead = ( {colors} ) => {
   );
 };
 
-export default DotCirclesHead;
+export default MovingCirclesHead;

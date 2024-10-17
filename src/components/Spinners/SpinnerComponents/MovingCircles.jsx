@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
 
-const MovingCircles = () => {
+const MovingCircles = ({
+  size = 90,
+  color1 = "#FF6F61",
+  color2 = "#22333B",
+  color3 = "#ffa9a1",
+  duration = 3,
+}) => {
   const [circle1Style, setCircle1Style] = useState({});
   const [circle2Style, setCircle2Style] = useState({});
   const [circle3Style, setCircle3Style] = useState({});
 
   useEffect(() => {
     setCircle1Style({
-      animation: "morph1 3s infinite ease-in-out",
+      animation: `morph1 ${duration}s infinite ease-in-out`,
     });
     setCircle2Style({
-      animation: "morph2 3s infinite ease-in-out",
+      animation: `morph2 ${duration}s infinite ease-in-out`,
     });
     setCircle3Style({
-      animation: "morph3 3s infinite ease-in-out",
+      animation: `morph3 ${duration}s infinite ease-in-out`,
     });
-  }, []);
+  }, [duration]);
+
+  const containerSize = size * 4; // Scale the container size based on the provided size
 
   return (
     <>
@@ -23,55 +31,55 @@ const MovingCircles = () => {
         {`
           @keyframes morph1 {
             0%, 100% {
-              transform: translate(0px, 0px); /* Starting position */
-              width: 90px;
-              height: 90px;
+              transform: translate(0px, 0px);
+              width: ${size}px;
+              height: ${size}px;
             } 
             33% {
-              transform: translate(150px, -100px); /* Move to second circle position */
-              width: 60px;
-              height: 60px;
+              transform: translate(${size * 1.66}px, -${size * 1.11}px);
+              width: ${size * 0.66}px;
+              height: ${size * 0.66}px;
             } 
             66% {
-              transform: translate(100px, 100px); /* Move to third circle position */
-              width: 140px;
-              height: 140px;
+              transform: translate(${size * 1.11}px, ${size * 1.11}px);
+              width: ${size * 1.55}px;
+              height: ${size * 1.55}px;
             }
           } 
 
           @keyframes morph2 {
             0%, 100% {
-              transform: translate(150px, -100px); /* Second circle starting position */
-              width: 60px;
-              height: 60px;
+              transform: translate(${size * 1.66}px, -${size * 1.11}px);
+              width: ${size * 0.66}px;
+              height: ${size * 0.66}px;
             }
             33% {
-              transform: translate(100px, 100px); /* Move to third circle position */
-              width: 140px;
-              height: 140px;
+              transform: translate(${size * 1.11}px, ${size * 1.11}px);
+              width: ${size * 1.55}px;
+              height: ${size * 1.55}px;
             }
             66% {
-              transform: translate(0px, 0px); /* Move to first circle position */
-              width: 90px;
-              height: 90px;
+              transform: translate(0px, 0px);
+              width: ${size}px;
+              height: ${size}px;
             }
           }
 
           @keyframes morph3 {
             0%, 100% {
-              transform: translate(100px, 100px); /* Third circle starting position */
-              width: 140px;
-              height: 140px;
+              transform: translate(${size * 1.11}px, ${size * 1.11}px);
+              width: ${size * 1.55}px;
+              height: ${size * 1.55}px;
             }
             33% {
-              transform: translate(0px, 0px); /* Move to first circle position */
-              width: 90px;
-              height: 90px;
+              transform: translate(0px, 0px);
+              width: ${size}px;
+              height: ${size}px;
             }
             66% {
-              transform: translate(150px, -100px); /* Move to second circle position */
-              width: 60px;
-              height: 60px;
+              transform: translate(${size * 1.66}px, -${size * 1.11}px);
+              width: ${size * 0.66}px;
+              height: ${size * 0.66}px;
             }
           }
         `}
@@ -80,8 +88,8 @@ const MovingCircles = () => {
       <div
         style={{
           position: "relative",
-          width: "400px",
-          height: "300px",
+          width: `${containerSize}px`,
+          height: `${containerSize * 0.75}px`, // Adjust height based on width for aspect ratio
           margin: "50px auto",
         }}
       >
@@ -90,7 +98,7 @@ const MovingCircles = () => {
           style={{
             position: "absolute",
             borderRadius: "50%",
-            backgroundColor: "#FF6F61",
+            backgroundColor: color1,
             ...circle1Style,
           }}
         />
@@ -99,7 +107,7 @@ const MovingCircles = () => {
           style={{
             position: "absolute",
             borderRadius: "50%",
-            backgroundColor: "#22333B",
+            backgroundColor: color2,
             ...circle2Style,
           }}
         />
@@ -108,7 +116,7 @@ const MovingCircles = () => {
           style={{
             position: "absolute",
             borderRadius: "50%",
-            backgroundColor: "#ffa9a1",
+            backgroundColor: color3,
             ...circle3Style,
           }}
         />

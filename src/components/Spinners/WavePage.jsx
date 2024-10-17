@@ -73,7 +73,9 @@ const WavePage = ({ initialValues }) => {
           <Link href={`/`}>
             <button className={styles.pageBtn}>Back</button>
           </Link>
-          <button className={styles.disabled}>Next</button>
+          <Link href={'/spinners/movingcircles'}>
+            <button className={styles.pageBtn}>Next</button>
+          </Link>
         </div>
       </div>
 

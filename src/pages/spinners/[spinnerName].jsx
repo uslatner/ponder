@@ -4,6 +4,7 @@ import CircularPage from "../../components/Spinners/CircularPage";
 import DotPage from "../../components/Spinners/DotPage";
 import SeqBoxMorphPage from "../../components/Spinners/SequentialBoxMorphingPage";
 import WavePage from "../../components/Spinners/WavePage";
+import MovingCirclesPage from "../../components/Spinners/MovingCirclesPage";
 
 import styles from "./1.module.scss";
 
@@ -44,7 +45,11 @@ const SpinnerPage = () => {
         opacity: 1,
         speed: "2s",
       },
-    }
+    },
+    movingcircles: {
+      Component: MovingCirclesPage,
+      initialValues: {}
+    },
   };
 
   const spinner = spinnerName ? spinners[spinnerName.toLowerCase()] : null;

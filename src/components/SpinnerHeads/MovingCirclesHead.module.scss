@@ -1,9 +1,22 @@
 @import '../../styles/variables';
 
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-bottom: 0rem;
+  border-radius: 8px;
+  position: relative;
+  width: 500px;
+  height: 520px;
+}
+
 .imageWrapper {
   position: relative;
   width: 500px; /* Set the container size */
-  height: 400px;
+  height: 520px;
 
   .oblakImage {
     position: absolute;
@@ -16,7 +29,7 @@
 
   .spinnerImage {
     position: absolute;
-    top: 63%;
+    top: 56%;
     left: 54%;
     transform: translate(-50%, -50%); /* Center the smaller spinner image */
     z-index: 2; /* Spinner image in front */
@@ -26,7 +39,7 @@
 
   .spinnerComponent {
     position: absolute;
-    top: 70%;
+    top: 56%;
     left: 43%;
     transform: translate(-50%, -50%) scale(0.45);
     z-index: 2;

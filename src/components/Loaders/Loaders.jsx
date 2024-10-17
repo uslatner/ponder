@@ -46,7 +46,7 @@ export const spinnersData = [
     SpinnerComponent: MovingCirclesHead,
     altText: "Spinner 5",
     text: "The Juggling Trio – These three dots aren't just spinning, they're juggling in perfect sync! As they grow, shrink, and twirl, they hold your attention with their rhythmic dance. Whether you're waiting or just watching, this trio turns loading into a mini performance.",
-    link: "/spinners/dotcirclesspinner",
+    link: "/spinners/movingcircles",
   },
 ];
 
