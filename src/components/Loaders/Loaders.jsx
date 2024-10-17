@@ -10,7 +10,7 @@ import CircularHead from "../SpinnerHeads/CircularHead";
 import DotHead from "../SpinnerHeads/DotHead";
 import BoxHead from "../SpinnerHeads/BoxHead";
 import WaveHead from "../SpinnerHeads/WaveHead";
-import DotCirclesHead from '../SpinnerHeads/DotCirclesHead';
+import MovingCirclesHead from '../SpinnerHeads/MovingCirclesHead';
 
 export const spinnersData = [
   {
@@ -43,7 +43,7 @@ export const spinnersData = [
   },
   {
     id: 5,
-    SpinnerComponent: DotCirclesHead,
+    SpinnerComponent: MovingCirclesHead,
     altText: "Spinner 5",
     text: "The Juggling Trio – These three dots aren't just spinning, they're juggling in perfect sync! As they grow, shrink, and twirl, they hold your attention with their rhythmic dance. Whether you're waiting or just watching, this trio turns loading into a mini performance.",
     link: "/spinners/dotcirclesspinner",

@@ -90,7 +90,7 @@ const MovingCircles = () => {
           style={{
             position: "absolute",
             borderRadius: "50%",
-            backgroundColor: "#333",
+            backgroundColor: "#FF6F61",
             ...circle1Style,
           }}
         />
@@ -99,7 +99,7 @@ const MovingCircles = () => {
           style={{
             position: "absolute",
             borderRadius: "50%",
-            backgroundColor: "#e5d4c0",
+            backgroundColor: "#22333B",
             ...circle2Style,
           }}
         />
@@ -108,7 +108,7 @@ const MovingCircles = () => {
           style={{
             position: "absolute",
             borderRadius: "50%",
-            backgroundColor: "#d2b48c",
+            backgroundColor: "#ffa9a1",
             ...circle3Style,
           }}
         />

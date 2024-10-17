@@ -1,10 +1,10 @@
 // components/Loaders/Loader.jsx
 import React from "react";
 import Image from "next/image";
-import styles from "./DotCirclesHead.module.scss";
+import styles from "./MovingCirclesHead.module.scss";
 
 import cloudneck02 from '../../assets/cloudwneck02.svg';
-import MovingCircles from "../Spinners/SpinnerComponents/DotCircles";
+import MovingCircles from "../Spinners/SpinnerComponents/MovingCircles";
 
 const DotCirclesHead = ( {colors} ) => {
   return (
