@@ -11,8 +11,6 @@ const MovingCirclesPage = ({ initialValues }) => {
     color2: initialValues.color2 || '#22333B',
     color3: initialValues.color3 || '#ffa9a1',
     duration: initialValues.duration || 3,
-    containerWidth: initialValues.containerWidth || 400,
-    containerHeight: initialValues.containerHeight || 300,
   });
 
   const [copiedCode, setCopiedCode] = useState(
@@ -53,8 +51,6 @@ const MovingCirclesPage = ({ initialValues }) => {
             color2={formValues.color2}
             color3={formValues.color3}
             duration={formValues.duration}
-            containerWidth={formValues.containerWidth}
-            containerHeight={formValues.containerHeight}
           />
           <p className={styles.spinnerText}>
             The Juggling Trio – These three dots aren't just spinning, they're juggling in perfect sync! As they grow, shrink, and twirl, they hold your attention with their rhythmic dance. Whether you're waiting or just watching, this trio turns loading into a mini performance.

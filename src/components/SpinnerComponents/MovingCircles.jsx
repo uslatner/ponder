@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const MovingCircles = ({
   size = 90,
@@ -89,7 +90,7 @@ const MovingCircles = ({
         style={{
           position: "relative",
           width: `${containerSize}px`,
-          height: `${containerSize * 0.75}px`, // Adjust height based on width for aspect ratio
+          height: `${containerSize * 0.75}px`,
           margin: "50px auto",
         }}
       >
@@ -123,6 +124,15 @@ const MovingCircles = ({
       </div>
     </>
   );
+};
+
+// PropTypes validation
+MovingCircles.propTypes = {
+  size: PropTypes.number,
+  color1: PropTypes.string,
+  color2: PropTypes.string,
+  color3: PropTypes.string,
+  duration: PropTypes.number,
 };
 
 export default MovingCircles;

@@ -3,15 +3,15 @@ import React from "react";
 import Image from "next/image";
 import styles from "./MovingCirclesHead.module.scss";
 
-import cloudneck02 from '../../assets/cloudwneck02.svg';
-import MovingCircles from "../Spinners/SpinnerComponents/MovingCircles";
+import cloudneck05 from '../../assets/cloudneck05.svg';
+import MovingCircles from "../SpinnerComponents/MovingCircles";
 
 const MovingCirclesHead = ( {size, color1, color2, color3, duration} ) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
         <Image
-          src={cloudneck02}
+          src={cloudneck05}
           alt="Oblak Background"
           className={styles.oblakImage}
           layout="responsive"

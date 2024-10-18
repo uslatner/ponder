@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./DotHead.module.scss";
 
 import cloudneck02 from '../../assets/cloudwneck02.svg';
-import DotSpinner from "../Spinners/SpinnerComponents/DotSpinner";
+import DotSpinner from "../SpinnerComponents/DotSpinner";
 
 const DotHead = ( {colors} ) => {
   return (

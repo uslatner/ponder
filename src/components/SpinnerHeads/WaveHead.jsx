@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./WaveHead.module.scss";
 
 import cloudneck04 from '../../assets/cloudneck04.svg';
-import Wave from "../Spinners/SpinnerComponents/Wave";
+import Wave from "../SpinnerComponents/Wave";
 
 const WaveHead = ( {colors, size, opacity, speed}) => {
 

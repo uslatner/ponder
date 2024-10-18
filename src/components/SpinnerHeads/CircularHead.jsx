@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./CircularHead.module.scss";
 
 import cloudneck01 from '../../assets/cloudwneck01.svg';
-import CircularSpinner from "../Spinners/SpinnerComponents/CircularSpinner";
+import CircularSpinner from "../SpinnerComponents/CircularSpinner";
 
 const CircularHead = ({ color1, color2, direction, opacity1, opacity2, speed }) => {
   return (

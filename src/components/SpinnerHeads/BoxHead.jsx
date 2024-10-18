@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./BoxHead.module.scss";
 
 import cloudneck03 from '../../assets/cloudneck03.svg';
-import SequentialBoxMorphing from "../Spinners/SpinnerComponents/SequentialBoxMorphing";
+import SequentialBoxMorphing from "../SpinnerComponents/SequentialBoxMorphing";
 
 const BoxHead = ({colors}) => {
   return (

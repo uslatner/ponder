@@ -1,10 +1,10 @@
 // pages/spinners/[spinnerName].jsx
 import { useRouter } from "next/router";
-import CircularPage from "../../components/Spinners/CircularPage";
-import DotPage from "../../components/Spinners/DotPage";
-import SeqBoxMorphPage from "../../components/Spinners/SequentialBoxMorphingPage";
-import WavePage from "../../components/Spinners/WavePage";
-import MovingCirclesPage from "../../components/Spinners/MovingCirclesPage";
+import CircularPage from "../../components/SpinnersPages/CircularPage";
+import DotPage from "../../components/SpinnersPages/DotPage";
+import SeqBoxMorphPage from "../../components/SpinnersPages/SequentialBoxMorphingPage";
+import WavePage from "../../components/SpinnersPages/WavePage";
+import MovingCirclesPage from "../../components/SpinnersPages/MovingCirclesPage";
 
 import styles from "./1.module.scss";
 
