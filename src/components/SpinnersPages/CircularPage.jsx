@@ -21,17 +21,30 @@ const CircularPage = ({ initialValues }) => {
     const { name, value } = e.target;
     setFormValues((prevValues) => {
       const updatedValues = { ...prevValues, [name]: value };
-      // Dynamically update the code whenever the form changes
-      setCopiedCode(`<CircularSpinner 
-        color1="${updatedValues.color1}" 
-        color2="${updatedValues.color2}" 
-        direction="${updatedValues.direction}" 
-        opacity1="${updatedValues.opacity1}" 
-        opacity2="${updatedValues.opacity2}" 
-        speed="${updatedValues.speed}" 
-      />`);
+      setCopiedCode(generateCode(updatedValues));
       return updatedValues;
     });
+  };
+
+  const handleDirectionChange = (direction) => {
+    // Simulate form input change when buttons are clicked
+    handleChange({
+      target: {
+        name: 'direction',
+        value: direction
+      }
+    });
+  };
+
+  const generateCode = (updatedValues) => {
+    return `<CircularSpinner 
+      color1="${updatedValues.color1}" 
+      color2="${updatedValues.color2}" 
+      direction="${updatedValues.direction}" 
+      opacity1="${updatedValues.opacity1}" 
+      opacity2="${updatedValues.opacity2}" 
+      speed="${updatedValues.speed}" 
+    />`;
   };
 
   return (
@@ -69,7 +82,7 @@ const CircularPage = ({ initialValues }) => {
 
         <div className={styles.generatedPropsContainer}>
           <p>{copiedCode}</p>
-          <CopyBtn textToCopy={copiedCode} theme="dark"/>
+          <CopyBtn textToCopy={copiedCode} theme="dark" />
         </div>
 
         <form>
@@ -115,13 +128,22 @@ const CircularPage = ({ initialValues }) => {
           </div>
           <div className={styles.inputField}>
             <label>Direction: </label>
-            <input className={styles.input}
-              type="text"
-              name="direction"
-              placeholder="direction"
-              onChange={handleChange}
-              value={formValues.direction}
-            />
+            <div className={styles.buttonGroup}>
+              <button
+                type="button"
+                className={formValues.direction === '360deg' ? styles.activeButton : styles.button}
+                onClick={() => handleDirectionChange('360deg')}
+              >
+                clockwise
+              </button>
+              <button
+                type="button"
+                className={formValues.direction === '-360deg' ? styles.activeButton : styles.button}
+                onClick={() => handleDirectionChange('-360deg')}
+              >
+                anticlockwise
+              </button>
+            </div>
           </div>
           <div className={styles.inputField}>
             <label>Speed: </label>

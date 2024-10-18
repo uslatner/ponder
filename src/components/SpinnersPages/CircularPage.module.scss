@@ -169,3 +169,37 @@
       text-decoration: none;
     }
   }
+
+  .buttonGroup {
+    display: flex;
+    gap: 1rem; /* Adds spacing between the buttons */
+  
+    button {
+      opacity: 30%;
+      color: $background-colour;
+      border: 2px solid $background-colour;
+      background-color: $primary-brand-colour;
+      border-radius: 1rem;
+      padding: 7px 15px;
+      cursor: pointer;
+      font-weight: $font-weight-bold;
+  
+      &:focus,
+      &:hover {
+        background-color: lighten($primary-brand-colour, 10%);
+        outline: none;
+        border-color: $background-colour;
+      }
+  
+      &.activeButton {
+        opacity: 100%;
+        color: $background-colour;
+        border: 2px solid $background-colour;
+        background-color: $primary-brand-colour;
+        border-radius: 1rem;
+        padding: 7px 15px;
+        cursor: pointer;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
