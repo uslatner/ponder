@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styles from "./CircularPage.module.scss";
-import CircularHead from "../SpinnerHeads/CircularHead";
+import styles from "./SpinPage.module.scss";
+import SpinHead from "../SpinnerHeads/SpinHead";
 import CopyBtn from "../common/copyBtn";
 import Link from 'next/link';
 
-const CircularPage = ({ initialValues }) => {
+const SpinPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
   const [copiedCode, setCopiedCode] = useState(
     `<Spin
@@ -54,7 +54,7 @@ const CircularPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <CircularHead
+          <SpinHead
             color1={formValues.color1}
             color2={formValues.color2}
             direction={formValues.direction}
@@ -80,7 +80,7 @@ const CircularPage = ({ initialValues }) => {
 
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
-        <h1>CIRCULAR SPINNER</h1>
+        <h1>SPIN</h1>
         <h2>ELEGANCE IN MOTION,<br />LIKE A BALLET DANCER TWIRLING.</h2>
 
         <div className={styles.generatedPropsContainer}>
@@ -174,4 +174,4 @@ const CircularPage = ({ initialValues }) => {
   );
 };
 
-export default CircularPage;
+export default SpinPage;

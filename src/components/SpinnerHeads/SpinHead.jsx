@@ -1,12 +1,12 @@
 // components/Loaders/Loader.jsx
 import React from "react";
 import Image from "next/image";
-import styles from "./CircularHead.module.scss";
+import styles from "./SpinHead.module.scss";
 
 import cloudneck01 from '../../assets/cloudwneck01.svg';
 import {Spin} from "@holmesdev/ponder-spinners";
 
-const CircularHead = ({ color1, color2, direction, opacity1, opacity2, speed, size }) => {
+const SpinHead = ({ color1, color2, direction, opacity1, opacity2, speed, size }) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -39,4 +39,4 @@ const CircularHead = ({ color1, color2, direction, opacity1, opacity2, speed, si
   );
 };
 
-export default CircularHead;
+export default SpinHead;
