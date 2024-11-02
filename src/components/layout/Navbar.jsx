@@ -21,6 +21,7 @@ export default function Navbar() {
       <div className={styles.links}>
         <a href="https://github.com/DBUG-DINGOES/customised-spinners" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://github.com/DBUG-DINGOES/customised-spinners" target="_blank" rel="noopener noreferrer">Docs</a>
+        <a href="/AboutUs">AboutUs</a>
       </div>
     </nav>
   );
