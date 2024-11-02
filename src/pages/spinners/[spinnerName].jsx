@@ -2,7 +2,7 @@
 import { useRouter } from "next/router";
 import SpinPage from "../../components/SpinnersPages/SpinPage";
 import DotsPage from "../../components/SpinnersPages/DotsPage";
-import SeqBoxMorphPage from "../../components/SpinnersPages/SequentialBoxMorphingPage";
+import PulseBoxPage from "../../components/SpinnersPages/PulseBoxPage";
 import WavePage from "../../components/SpinnersPages/WavePage";
 import MovingCirclesPage from "../../components/SpinnersPages/MovingCirclesPage";
 
@@ -29,8 +29,8 @@ const SpinnerPage = () => {
         colors: ["#22333B", "#FF6F61", "#B7AEA3"],
       },
     },
-    seqboxmorph: { // Add Sequential Box Morph spinner
-      Component: SeqBoxMorphPage,
+    pulsebox: { // Add Sequential Box Morph spinner
+      Component: PulseBoxPage,
       initialValues: {
         colors: ["#22333B", "#FF6F61", "#ffa9a1", "#22333B"],
       },

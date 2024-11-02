@@ -44,7 +44,7 @@ const DotsPage = ({ initialValues }) => {
           <Link href={`/`}>
             <button className={styles.pageBtn}>Back</button>
           </Link>
-          <Link href={'/spinners/seqboxmorph'}>
+          <Link href={'/spinners/pulsebox'}>
             <button className={styles.pageBtn}>Next</button>
           </Link>
         </div>

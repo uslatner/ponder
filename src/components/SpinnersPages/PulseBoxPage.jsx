@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from './SequentialBoxMorphingPage.module.scss';
-import BoxHead from '../SpinnerHeads/BoxHead';
+import styles from './PulseBoxPage.module.scss';
+import PulseBoxHead from '../SpinnerHeads/PulseBoxHead';
 import CopyBtn from '../common/copyBtn';
 
-const SeqBoxMorphPage = ({ initialValues }) => {
+const PulseBoxPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState({
     colors: [...initialValues.colors],
   });
 
   const [copiedCode, setCopiedCode] = useState(
-    `<BoxMorphSpinner 
+    `<PulseBox 
         colors={[${initialValues.colors.map(color => `"${color}"`).join(', ')}]} 
     />`
   );
@@ -24,7 +24,7 @@ const SeqBoxMorphPage = ({ initialValues }) => {
     }));
 
     // Dynamically update the copied code
-    setCopiedCode(`<BoxMorphSpinner 
+    setCopiedCode(`<PulseBox 
         colors={[${newColors.map(color => `"${color}"`).join(', ')}]} 
     />`);
   };
@@ -34,7 +34,7 @@ const SeqBoxMorphPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <BoxHead colors={formValues.colors} />
+          <PulseBoxHead colors={formValues.colors} />
           <p className={styles.spinnerText}>
             Experience the magic of the Sequential Box Morph – it's not just a transformation, it's an evolution of colors and shapes. As each box changes hue, it dances gracefully, bringing life to your loading experience. Who knew waiting could be this captivating?
           </p>
@@ -54,7 +54,7 @@ const SeqBoxMorphPage = ({ initialValues }) => {
 
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
-        <h1>SEQUENTIAL BOX MORPH</h1>
+        <h1>PULSE BOX</h1>
         <h2>AN EVOLUTION OF COLORS,<br />A DANCE OF SHAPES.</h2>
 
         <div className={styles.generatedPropsContainer}>
@@ -80,4 +80,4 @@ const SeqBoxMorphPage = ({ initialValues }) => {
   );
 };
 
-export default SeqBoxMorphPage;
+export default PulseBoxPage;

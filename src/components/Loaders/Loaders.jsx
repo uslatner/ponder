@@ -8,7 +8,7 @@ import Image from "next/image";
 // Import spinner heads
 import SpinHead from "../SpinnerHeads/SpinHead";
 import DotsHead from "../SpinnerHeads/DotsHead";
-import BoxHead from "../SpinnerHeads/BoxHead";
+import PulseBoxHead from "../SpinnerHeads/PulseBoxHead";
 import WaveHead from "../SpinnerHeads/WaveHead";
 import MovingCirclesHead from '../SpinnerHeads/MovingCirclesHead';
 
@@ -37,10 +37,10 @@ export const spinnersData = [
   },
   {
     id: 3,
-    SpinnerComponent: BoxHead,
+    SpinnerComponent: PulseBoxHead,
     altText: "Spinner 4",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
-    link: "/spinners/seqboxmorph",
+    link: "/spinners/pulsebox",
   },
   {
     id: 4,

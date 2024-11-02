@@ -67,7 +67,7 @@ const WavePage = ({ initialValues }) => {
           </p>
         </div>
         <div className={styles.navButtons}>
-          <Link href={'/spinners/seqboxmorph'}>
+          <Link href={'/spinners/pulsebox'}>
             <button className={styles.pageBtn}>Prev</button>
           </Link>
           <Link href={`/`}>

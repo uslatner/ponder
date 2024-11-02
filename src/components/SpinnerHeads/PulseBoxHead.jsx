@@ -1,12 +1,12 @@
 // components/Loaders/Loader.jsx
 import React from "react";
 import Image from "next/image";
-import styles from "./BoxHead.module.scss";
+import styles from "./PulseBoxHead.module.scss";
 
 import cloudneck03 from '../../assets/cloudneck03.svg';
-import SequentialBoxMorphing from "../SpinnerComponents/SequentialBoxMorphing";
+import { PulseBox } from "@holmesdev/ponder-spinners";
 
-const BoxHead = ({colors}) => {
+const PulseBoxHead = ({colors}) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -20,9 +20,9 @@ const BoxHead = ({colors}) => {
         />
 
         {/* Render the SpinnerComponent with the new class */}
-        {SequentialBoxMorphing && (
+        {PulseBox && (
           <div className={styles.spinnerComponent}>
-            <SequentialBoxMorphing 
+            <PulseBox
               colors={colors}/>
           </div>
         )}
@@ -32,4 +32,4 @@ const BoxHead = ({colors}) => {
   );
 };
 
-export default BoxHead;
+export default PulseBoxHead;
