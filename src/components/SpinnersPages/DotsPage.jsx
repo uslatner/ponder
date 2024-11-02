@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './DotPage.module.scss';
-import DotHead from '../../components/SpinnerHeads/DotHead';
+import styles from './DotsPage.module.scss';
+import DotsHead from '../SpinnerHeads/DotsHead';
 import CopyBtn from '../common/copyBtn';
 
-const DotPage = ({ initialValues }) => {
+const DotsPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
   const [copiedCode, setCopiedCode] = useState(
-    `<DotSpinner 
+    `<Dots
         colors={[${initialValues.colors.map(color => `"${color}"`).join(', ')}]} 
     />`
   );
@@ -22,7 +22,7 @@ const DotPage = ({ initialValues }) => {
     }));
 
     // Dynamically update the copied code
-    setCopiedCode(`<DotSpinner 
+    setCopiedCode(`<Dots 
         colors={[${newColors.map(color => `"${color}"`).join(', ')}]} 
     />`);
   };
@@ -32,7 +32,7 @@ const DotPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <DotHead colors={formValues.colors} />
+          <DotsHead colors={formValues.colors} />
           <p className={styles.spinnerText}>
           Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?
           </p>
@@ -52,7 +52,7 @@ const DotPage = ({ initialValues }) => {
 
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
-        <h1>DOT SPINNER</h1>
+        <h1>DOTS</h1>
         <h2>SPINNING IN COLOR,<br />A DANCE OF DOTS.</h2>
 
         <div className={styles.generatedPropsContainer}>
@@ -77,4 +77,4 @@ const DotPage = ({ initialValues }) => {
   );
 };
 
-export default DotPage;
+export default DotsPage;

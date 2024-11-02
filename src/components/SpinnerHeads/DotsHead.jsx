@@ -1,12 +1,12 @@
 // components/Loaders/Loader.jsx
 import React from "react";
 import Image from "next/image";
-import styles from "./DotHead.module.scss";
+import styles from "./DotsHead.module.scss";
 
 import cloudneck02 from '../../assets/cloudwneck02.svg';
-import DotSpinner from "../SpinnerComponents/DotSpinner";
+import { Dots } from "@holmesdev/ponder-spinners";
 
-const DotHead = ( {colors} ) => {
+const DotsHead = ( {colors} ) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -20,9 +20,9 @@ const DotHead = ( {colors} ) => {
         />
 
         {/* Render the SpinnerComponent with the new class */}
-        {DotSpinner && (
+        {Dots && (
           <div className={styles.spinnerComponent}>
-            <DotSpinner 
+            <Dots
               colors={colors}
             />
           </div>
@@ -33,4 +33,4 @@ const DotHead = ( {colors} ) => {
   );
 };
 
-export default DotHead;
+export default DotsHead;

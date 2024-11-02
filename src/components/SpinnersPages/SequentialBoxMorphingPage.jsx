@@ -40,7 +40,7 @@ const SeqBoxMorphPage = ({ initialValues }) => {
           </p>
         </div>
         <div className={styles.navButtons}>
-          <Link href={'/spinners/dotspinner'}>
+          <Link href={'/spinners/dots'}>
             <button className={styles.pageBtn}>Prev</button>
           </Link>
           <Link href={`/`}>

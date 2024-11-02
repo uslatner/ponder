@@ -1,7 +1,7 @@
 // pages/spinners/[spinnerName].jsx
 import { useRouter } from "next/router";
 import SpinPage from "../../components/SpinnersPages/SpinPage";
-import DotPage from "../../components/SpinnersPages/DotPage";
+import DotsPage from "../../components/SpinnersPages/DotsPage";
 import SeqBoxMorphPage from "../../components/SpinnersPages/SequentialBoxMorphingPage";
 import WavePage from "../../components/SpinnersPages/WavePage";
 import MovingCirclesPage from "../../components/SpinnersPages/MovingCirclesPage";
@@ -23,8 +23,8 @@ const SpinnerPage = () => {
         size:"100"
       },
     },
-    dotspinner: {
-      Component: DotPage,
+    dots: {
+      Component: DotsPage,
       initialValues: {
         colors: ["#22333B", "#FF6F61", "#B7AEA3"],
       },

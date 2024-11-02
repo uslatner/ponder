@@ -6,8 +6,8 @@ import logoLine from "../../assets/logoLine.svg";
 import Image from "next/image";
 
 // Import spinner heads
-import CircularHead from "../SpinnerHeads/CircularHead";
-import DotHead from "../SpinnerHeads/DotHead";
+import SpinHead from "../SpinnerHeads/SpinHead";
+import DotsHead from "../SpinnerHeads/DotsHead";
 import BoxHead from "../SpinnerHeads/BoxHead";
 import WaveHead from "../SpinnerHeads/WaveHead";
 import MovingCirclesHead from '../SpinnerHeads/MovingCirclesHead';
@@ -15,7 +15,7 @@ import MovingCirclesHead from '../SpinnerHeads/MovingCirclesHead';
 export const spinnersData = [
   {
     id: 1,
-    SpinnerComponent: CircularHead,
+    SpinnerComponent: SpinHead,
     color1:"#FF6F61",
     color2:"#FF6F61",
     opacity1:0.5,
@@ -29,10 +29,11 @@ export const spinnersData = [
   },
   {
     id: 2,
-    SpinnerComponent: DotHead,
+    SpinnerComponent: DotsHead,
+    colors: ["#22333B", "#FF6F61", "#B7AEA3"],
     altText: "Spinner 2",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
-    link: "/spinners/dotspinner",
+    link: "/spinners/dots",
   },
   {
     id: 3,
