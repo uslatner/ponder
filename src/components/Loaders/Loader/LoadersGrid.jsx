@@ -10,8 +10,7 @@ const SpinnersGrid = ({ spinners }) => {
       {spinners.map((spinner, index) => (
         <div key={index}> {/* Move key here for the outer div */}
           <Loader
-            SpinnerComponent={spinner.SpinnerComponent}
-            text={spinner.text}
+            {...spinner}
           />
           <Link href={spinner.link}>
             <button className={styles.customiseBtn}>Customise your own</button>

@@ -1,4 +1,4 @@
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/features/HeroSection";
 import Loaders from "../components/Loaders/Loaders";
 import {CircularSpinner} from "my-awesome-spinner";
 

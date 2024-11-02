@@ -6,14 +6,12 @@ import SeqBoxMorphPage from "../../components/SpinnersPages/SequentialBoxMorphin
 import WavePage from "../../components/SpinnersPages/WavePage";
 import MovingCirclesPage from "../../components/SpinnersPages/MovingCirclesPage";
 
-import styles from "./1.module.scss";
-
 const SpinnerPage = () => {
   const router = useRouter();
   const { spinnerName } = router.query;
 
   const spinners = {
-    circularspinner: {
+    spin: {
       Component: CircularPage,
       initialValues: {
         color1: "#FF6F61",
@@ -22,6 +20,7 @@ const SpinnerPage = () => {
         opacity2: 1,
         direction: "-360deg",
         speed: "2s",
+        size:"100"
       },
     },
     dotspinner: {

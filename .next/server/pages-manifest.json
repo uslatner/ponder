@@ -2,8 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/spinners/[spinnerName]": "pages/spinners/[spinnerName].js",
-  "/AboutUs2": "pages/AboutUs2.js",
   "/": "pages/index.js",
-  "/AboutUs": "pages/AboutUs.js"
+  "/spinners/[spinnerName]": "pages/spinners/[spinnerName].js"
 }

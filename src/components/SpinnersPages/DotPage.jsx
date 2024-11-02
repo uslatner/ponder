@@ -38,7 +38,7 @@ const DotPage = ({ initialValues }) => {
           </p>
         </div>
         <div className={styles.navButtons}>
-          <Link href={'/spinners/circularspinner'}>
+          <Link href={'/spinners/spin'}>
             <button className={styles.pageBtn}>Prev</button>
           </Link>
           <Link href={`/`}>

@@ -7,13 +7,14 @@ import Link from 'next/link';
 const CircularPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState(initialValues);
   const [copiedCode, setCopiedCode] = useState(
-    `<CircularSpinner 
+    `<Spin
         color1="${initialValues.color1}" 
         color2="${initialValues.color2}" 
         direction="${initialValues.direction}" 
         opacity1="${initialValues.opacity1}" 
         opacity2="${initialValues.opacity2}" 
         speed="${initialValues.speed}" 
+        size="${initialValues.size}" 
     />`
   );
 
@@ -37,13 +38,14 @@ const CircularPage = ({ initialValues }) => {
   };
 
   const generateCode = (updatedValues) => {
-    return `<CircularSpinner 
+    return `<Spin
       color1="${updatedValues.color1}" 
       color2="${updatedValues.color2}" 
       direction="${updatedValues.direction}" 
       opacity1="${updatedValues.opacity1}" 
       opacity2="${updatedValues.opacity2}" 
-      speed="${updatedValues.speed}" 
+      speed="${updatedValues.speed}"
+      size="${updatedValues.size}" 
     />`;
   };
 
@@ -59,9 +61,10 @@ const CircularPage = ({ initialValues }) => {
             opacity1={formValues.opacity1}
             opacity2={formValues.opacity2}
             speed={formValues.speed}
+            size={formValues.size}
           />
           <p className={styles.spinnerText}>
-            Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.
+            Meet Spin – the zen master of loading spinners! As it gracefully whirls, it’s like watching calm in motion, bringing a sense of balance to your wait time. Spin isn’t just a loading icon; it’s a moment of quiet reflection, wrapped in code.
           </p>
         </div>
         <div className={styles.navButtons}>
@@ -153,6 +156,16 @@ const CircularPage = ({ initialValues }) => {
               placeholder="speed"
               onChange={handleChange}
               value={formValues.speed}
+            />
+          </div>
+          <div className={styles.inputField}>
+            <label>Size: </label>
+            <input className={styles.input}
+              type="text"
+              name="size"
+              placeholder="size"
+              onChange={handleChange}
+              value={formValues.size}
             />
           </div>
         </form>

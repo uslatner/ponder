@@ -1,13 +1,13 @@
 // components/HeroSection.js
-import styles from "../components/HeroSection.module.scss";
+import styles from "./HeroSection.module.scss";
 import Image from "next/image";
-import heroPic from "../assets/heroPic.svg";
+import heroPic from "../../assets/heroPic.svg";
 import { useState } from "react";
 
-import CopyBtn from "../components/common/copyBtn";
+import CopyBtn from "../common/copyBtn";
 
 export default function HeroSection() {
-  const textToCopy = "npm install Ponder";
+  const textToCopy = "npm i @holmesdev/ponder-spinners";
   const [isCopied, setIsCopied] = useState(false);
   const copyToClipboard = () => {
     navigator.clipboard.writeText(textToCopy);
@@ -45,7 +45,7 @@ export default function HeroSection() {
             </button>
           </div>
           <div className={styles.copyContainer}>
-            <span className={styles.npmText}>npm install Ponder</span>
+            <span className={styles.npmText}>npm i @holmesdev/ponder-spinners</span>
             <CopyBtn textToCopy={textToCopy} theme="light" />
           </div>
         </div>

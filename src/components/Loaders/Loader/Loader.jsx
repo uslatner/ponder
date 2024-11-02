@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image"; // Import Image from Next.js
 import styles from "./Loader.module.scss"; // Adjust path as necessary
 
-const Loader = ({ SpinnerComponent, text }) => {
+const Loader = ({ SpinnerComponent, text, ...props }) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -11,7 +11,7 @@ const Loader = ({ SpinnerComponent, text }) => {
         {/* Render the SpinnerComponent with the new class */}
         {SpinnerComponent && (
           <div>
-            <SpinnerComponent />
+            <SpinnerComponent {...props}/>
           </div>
         )}
       </div>
