@@ -26,12 +26,20 @@ const Docs = () => {
       <main className={styles.docsContent}>
         <section id="intro">
             <h2>Introduction</h2>
-          <p>Team DBUG DINGOES from Holmesglen Ponder Spinners has crafted a set of animated SVG spinners and loading indicators, so you don’t have to spend time coding and debugging UI components from scratch. Enhance your app's loading experience with visually captivating components!</p>
+          <p className={styles.punctuation}>Team DBUG DINGOES from Holmesglen Ponder Spinners has crafted a set of animated SVG spinners and loading indicators, so you don’t have to spend time coding and debugging UI components from scratch. Enhance your app's loading experience with visually captivating components!</p>
         </section>
         
+        <section id="installation">
+          <h2>Installation</h2>
+          <p className={styles.punctuation}>To install and set up the library, run:</p>
+          <code>npm i @holmesdev/ponder-spinners</code>
+          <p className={styles.punctuation}>Or using Yarn:</p>
+          <code>yarn add @holmesdev/ponder-spinners</code>
+        </section>
+
         <section id="components">
           <h2>Spinner Components Animation</h2>
-          <p>This library includes various React components for spinners and animations, helping you enhance your UI effortlessly using styled-components for animations and customizations.</p>
+          <p className={styles.punctuation}>This library includes various React components for spinners and animations, helping you enhance your UI effortlessly using styled-components for animations and customizations.</p>
           <table>
             <thead>
               <tr>
@@ -70,13 +78,6 @@ const Docs = () => {
           </table>
         </section>
 
-        <section id="installation">
-          <h2>Installation</h2>
-          <p>To install and set up the library, run:</p>
-          <code>npm i @holmesdev/ponder-spinners</code>
-          <p>Or using Yarn:</p>
-          <code>yarn add @holmesdev/ponder-spinners</code>
-        </section>
 
         <section id="usage">
           <h2>Usage</h2>

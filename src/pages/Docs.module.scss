@@ -12,7 +12,6 @@
 
 .docsNav {
   position: fixed; // Keep the navigation fixed
-  width: 20%; // Set the width of the navigation
   height: 100vh; // Set height to full viewport height
   padding: 2rem;
   overflow: auto; // Enable scrolling if necessary
@@ -76,12 +75,15 @@
     h2 {
       font-size: $font-size-large;
       margin-bottom: 1rem;
+      margin-top: 2.5rem;
     }
   
     p,
     code {
       font-size: $font-size-normal;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      padding-bottom: 0;
     }
   
     code {
@@ -92,3 +94,6 @@
     }
   }
   
+  .punctuation {
+    direction: ltr;
+  }
