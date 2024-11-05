@@ -12,7 +12,6 @@
 
 .docsNav {
   position: fixed; // Keep the navigation fixed
-  height: 100vh; // Set height to full viewport height
   padding: 2rem;
   overflow: auto; // Enable scrolling if necessary
 
@@ -44,7 +43,7 @@
 .docsContent {
     margin-left: 20%; // Ensure content starts after nav
     width: 80%; // Content area width
-    height: 80vh; // Set the height based on your layout requirements
+    height: 78vh; // Set the height based on your layout requirements
     overflow-y: auto; // Enable vertical scrolling only on the content area
     padding: 2rem;
 
