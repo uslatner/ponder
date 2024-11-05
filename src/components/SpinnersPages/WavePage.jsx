@@ -73,7 +73,7 @@ const WavePage = ({ initialValues }) => {
           <Link href={`/`}>
             <button className={styles.pageBtn}>Back</button>
           </Link>
-          <Link href={'/spinners/movingcircles'}>
+          <Link href={'/spinners/circles'}>
             <button className={styles.pageBtn}>Next</button>
           </Link>
         </div>
@@ -81,8 +81,8 @@ const WavePage = ({ initialValues }) => {
 
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
-        <h1>WAVE SPINNER</h1>
-        <h2>RHYTHMIC MOTION,<br />A DANCE OF COLORS.</h2>
+        <h1>WAVE</h1>
+        <h2>RHYTHMIC MOTION,<br />A SEA OF COLORS.</h2>
 
         <div className={styles.generatedPropsContainer}>
           <p>{copiedCode}</p>

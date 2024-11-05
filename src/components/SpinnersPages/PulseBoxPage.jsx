@@ -46,7 +46,7 @@ const PulseBoxPage = ({ initialValues }) => {
           <Link href={`/`}>
             <button className={styles.pageBtn}>Back</button>
           </Link>
-          <Link href={'/spinners/wavespinner'}>
+          <Link href={'/spinners/wave'}>
             <button className={styles.pageBtn}>Next</button>
           </Link>
         </div>

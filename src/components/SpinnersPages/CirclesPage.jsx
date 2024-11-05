@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styles from './MovingCirclesPage.module.scss';
-import MovingCirclesHead from '../SpinnerHeads/MovingCirclesHead';
+import styles from './CirclesPage.module.scss';
+import CirclesHead from '../SpinnerHeads/CirclesHead';
 import CopyBtn from '../common/copyBtn';
 import Link from 'next/link';
 
-const MovingCirclesPage = ({ initialValues }) => {
+const CirclesPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState({
     size: initialValues.size || 90,
     color1: initialValues.color1 || '#FF6F61',
@@ -14,7 +14,7 @@ const MovingCirclesPage = ({ initialValues }) => {
   });
 
   const [copiedCode, setCopiedCode] = useState(
-    `<MovingCircles 
+    `<Circles 
         size={${formValues.size}} 
         color1="${formValues.color1}" 
         color2="${formValues.color2}" 
@@ -29,7 +29,7 @@ const MovingCirclesPage = ({ initialValues }) => {
       const updatedValues = { ...prevValues, [name]: value };
       // Update the copied code with new form values
       setCopiedCode(
-        `<MovingCircles 
+        `<Circles 
         size={${updatedValues.size}} 
         color1="${updatedValues.color1}" 
         color2="${updatedValues.color2}" 
@@ -45,7 +45,7 @@ const MovingCirclesPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <MovingCirclesHead
+          <CirclesHead
             size={formValues.size}
             color1={formValues.color1}
             color2={formValues.color2}
@@ -57,7 +57,7 @@ const MovingCirclesPage = ({ initialValues }) => {
           </p>
         </div>
         <div className={styles.navButtons}>
-          <Link href={`/spinners/wavespinner`}>
+          <Link href={`/spinners/wave`}>
             <button className={styles.pageBtn}>Prev</button>
           </Link>
           <Link href={`/`}>
@@ -69,7 +69,7 @@ const MovingCirclesPage = ({ initialValues }) => {
 
       {/* Right side (Name, description, code, and form) */}
       <div className={styles.rightSide}>
-        <h1>MOVING CIRCLES</h1>
+        <h1>CIRCLES</h1>
         <h2>VIBRANT DANCE OF GEOMETRY,<br />A PERFECT LOOP IN MOTION.</h2>
 
         <div className={styles.generatedPropsContainer}>
@@ -139,4 +139,4 @@ const MovingCirclesPage = ({ initialValues }) => {
   );
 };
 
-export default MovingCirclesPage;
+export default CirclesPage;

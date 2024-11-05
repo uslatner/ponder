@@ -1,12 +1,12 @@
 // components/Loaders/Loader.jsx
 import React from "react";
 import Image from "next/image";
-import styles from "./MovingCirclesHead.module.scss";
+import styles from "./CirclesHead.module.scss";
 
 import cloudneck05 from '../../assets/cloudneck05.svg';
-import MovingCircles from "../SpinnerComponents/MovingCircles";
+import { Circles } from "@holmesdev/ponder-spinners";
 
-const MovingCirclesHead = ( {size, color1, color2, color3, duration} ) => {
+const CirclesHead = ( {size, color1, color2, color3, duration} ) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -20,9 +20,9 @@ const MovingCirclesHead = ( {size, color1, color2, color3, duration} ) => {
         />
 
         {/* Render the SpinnerComponent with the new class */}
-        {MovingCircles && (
+        {Circles && (
           <div className={styles.spinnerComponent}>
-            <MovingCircles
+            <Circles
               size = {size}
               color1 = {color1}
               color2 = {color2}
@@ -37,4 +37,4 @@ const MovingCirclesHead = ( {size, color1, color2, color3, duration} ) => {
   );
 };
 
-export default MovingCirclesHead;
+export default CirclesHead;

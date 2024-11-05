@@ -10,7 +10,7 @@ import SpinHead from "../SpinnerHeads/SpinHead";
 import DotsHead from "../SpinnerHeads/DotsHead";
 import PulseBoxHead from "../SpinnerHeads/PulseBoxHead";
 import WaveHead from "../SpinnerHeads/WaveHead";
-import MovingCirclesHead from '../SpinnerHeads/MovingCirclesHead';
+import CirclesHead from '../SpinnerHeads/CirclesHead';
 
 export const spinnersData = [
   {
@@ -31,30 +31,30 @@ export const spinnersData = [
     id: 2,
     SpinnerComponent: DotsHead,
     colors: ["#22333B", "#FF6F61", "#B7AEA3"],
-    altText: "Spinner 2",
+    altText: "Dots",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
     link: "/spinners/dots",
   },
   {
     id: 3,
     SpinnerComponent: PulseBoxHead,
-    altText: "Spinner 4",
+    altText: "PulseBox",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
     link: "/spinners/pulsebox",
   },
   {
     id: 4,
     SpinnerComponent: WaveHead,
-    altText: "Spinner 4",
+    altText: "Wave",
     text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?",
-    link: "/spinners/wavespinner",
+    link: "/spinners/wave",
   },
   {
     id: 5,
-    SpinnerComponent: MovingCirclesHead,
+    SpinnerComponent: CirclesHead,
     altText: "Spinner 5",
     text: "The Juggling Trio – These three dots aren't just spinning, they're juggling in perfect sync! As they grow, shrink, and twirl, they hold your attention with their rhythmic dance. Whether you're waiting or just watching, this trio turns loading into a mini performance.",
-    link: "/spinners/movingcircles",
+    link: "/spinners/circles",
   },
 ];
 

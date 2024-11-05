@@ -4,7 +4,7 @@ import SpinPage from "../../components/SpinnersPages/SpinPage";
 import DotsPage from "../../components/SpinnersPages/DotsPage";
 import PulseBoxPage from "../../components/SpinnersPages/PulseBoxPage";
 import WavePage from "../../components/SpinnersPages/WavePage";
-import MovingCirclesPage from "../../components/SpinnersPages/MovingCirclesPage";
+import CirclesPage from "../../components/SpinnersPages/CirclesPage";
 
 const SpinnerPage = () => {
   const router = useRouter();
@@ -35,7 +35,7 @@ const SpinnerPage = () => {
         colors: ["#22333B", "#FF6F61", "#ffa9a1", "#22333B"],
       },
     },
-    wavespinner: {
+    wave: {
       Component: WavePage,
       initialValues: {
         size: "60",
@@ -45,8 +45,8 @@ const SpinnerPage = () => {
         speed: "2s",
       },
     },
-    movingcircles: {
-      Component: MovingCirclesPage,
+    circles: {
+      Component: CirclesPage,
       initialValues: {}
     },
   };
