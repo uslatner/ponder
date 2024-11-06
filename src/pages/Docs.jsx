@@ -17,8 +17,8 @@ const Docs = () => {
         <ul>
           <li><a href="#intro" onClick={(e) => scrollToSection(e, 'intro')}>Introduction</a></li>
           <li><a href="#installation" onClick={(e) => scrollToSection(e, 'installation')}>Installation</a></li>
-          <li><a href="#usage" onClick={(e) => scrollToSection(e, 'usage')}>Usage</a></li>
           <li><a href="#components" onClick={(e) => scrollToSection(e, 'components')}>Components</a></li>
+          <li><a href="#usage" onClick={(e) => scrollToSection(e, 'usage')}>Usage</a></li>
           <li><a href="#properties" onClick={(e) => scrollToSection(e, 'properties')}>Component Properties</a></li>
           <li><a href="#inspiration" onClick={(e) => scrollToSection(e, 'inspiration')}>Inspiration</a></li>
           <li><a href="#thanks" onClick={(e) => scrollToSection(e, 'thanks')}>Special Thanks</a></li>
@@ -89,44 +89,92 @@ const Docs = () => {
 
 
 
-        <section id="usage">
-          <h2>Usage</h2>
-          <p>Here's how to use the components:</p>
-          <h3>Spin</h3>
-          <code>
-            {`import { Spin } from "@holmesdev/ponder-spinners";`}
-            <br />
-            {`<Spin color1="#FF6F61" color2="#ffa9a1" opacity1={0.5} opacity2={1} speed="1s" direction="360deg" size="100" />`}
-          </code>
+            <section id="usage">
+                <h2>Usage</h2>
+                <p className={styles.punctuation}>Here's how to use the components:</p>
 
-          <h3>Dots</h3>
-          <code>
-            {`import { Dots } from "@holmesdev/ponder-spinners";`}
-            <br />
-            {`<Dots colors={["#22333B", "#FF6F61", "#B7AEA3"]} />`}
-          </code>
+                <div className={styles.codeSnippetContainer}>
+                    <h3 className={styles.codeHeading}>Spin</h3>
+                    <div className={styles.codeBlock}><code>
+                {`import { Spin } from "@holmesdev/ponder-spinners";`}
+                <br />
+                {`
+                <Spin
+                    color1="#FF6F61"
+                    color2="#ffa9a1"
+                    opacity1={0.5}
+                    opacity2={1}
+                    speed="1s"
+                    direction="360deg"
+                    size="100"
+                />`}
+                    </code></div>
+                </div>
 
-          <h3>Pulse Box</h3>
-          <code>
-            {`import { PulseBox } from "@holmesdev/ponder-spinners";`}
-            <br />
-            {`<PulseBox color={["#22333B", "#FF6F61", "#ffa9a1", "#22333B"]} />`}
-          </code>
+                <div className={styles.codeSnippetContainer}>
+                    <h3 className={styles.codeHeading}>Dots</h3>
+                    <div className={styles.codeBlock}>
+                        <code>
+                        {`import { Dots } from "@holmesdev/ponder-spinners";`}
+                        <br />
+                        {`
+                        <Dots 
+                            colors={["#22333B", "#FF6F61", "#B7AEA3"]} 
+                        />`}
+                        </code>
+                    </div>
+                </div>
 
-          <h3>Wave</h3>
-          <code>
-            {`import { Wave } from "@holmesdev/ponder-spinners";`}
-            <br />
-            {`<Wave size="70px" color={["#22333B", "#EAE0D5"]} speed="2s" opacity={1} />`}
-          </code>
+                <div className={styles.codeSnippetContainer}>
+                    <h3 className={styles.codeHeading}>Pulse Box</h3>
+                    <div className={styles.codeBlock}>
+                        <code>
+                        {`import { PulseBox } from "@holmesdev/ponder-spinners";`}
+                        <br />
+                        {`
+                        <PulseBox 
+                            color={["#22333B", "#FF6F61", "#ffa9a1", "#22333B"]} 
+                        />`}
+                        </code>
+                    </div>
+                </div>
 
-          <h3>Circles</h3>
-          <code>
-            {`import { Circles } from "@holmesdev/ponder-spinners";`}
-            <br />
-            {`<Circles size={90} color1="#FF6F61" color2="#22333B" color3="#ffa9a1" duration={3} />`}
-          </code>
-        </section>
+                <div className={styles.codeSnippetContainer}>
+                    <h3 className={styles.codeHeading}>Wave</h3>
+                    <div className={styles.codeBlock}>
+                        <code>
+                        {`import { Wave } from "@holmesdev/ponder-spinners";`}
+                        <br />
+                        {`
+                        <Wave 
+                            size="70px" 
+                            color={["#22333B", "#EAE0D5"]} 
+                            speed="2s" 
+                            opacity={1} 
+                        />`}
+                        </code>
+                    </div>
+                </div>
+
+                <div className={styles.codeSnippetContainer}>
+                    <h3 className={styles.codeHeading}>Circles</h3>
+                    <div className={styles.codeBlock}>
+                        <code>
+                        {`import { Circles } from "@holmesdev/ponder-spinners";`}
+                        <br />
+                        {`
+                        <Circles 
+                            size={90} 
+                            color1="#FF6F61" 
+                            color2="#22333B" 
+                            color3="#ffa9a1" 
+                            duration={3} 
+                        />`}
+                        </code>
+                    </div>
+                </div>
+                </section>
+
 
         <section id="properties">
           <h2>Component Properties 📋</h2>

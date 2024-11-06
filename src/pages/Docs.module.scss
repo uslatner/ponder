@@ -126,7 +126,8 @@
     td {
       padding: 0.75rem;
       text-align: left;
-      border: 1px solid $background-off-colour; // Adds border with background-off-colour
+      border: 1px solid $background-off-colour;
+
     }
   
     thead {
@@ -146,5 +147,35 @@
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
       font-size: 0.9rem;
+    }
+  }
+
+  .codeIntroText {
+    font-size: 1.2rem;
+  }
+  
+  .codeSnippetContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .codeHeading {
+    font-size: $font-size-normal;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+  
+  .codeBlock {
+    font-family: 'Courier New', monospace;
+    border-radius: 2rem;
+    padding: 1rem;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: pre-wrap; /* Keeps formatting intact */
+    word-wrap: break-word; /* Wraps long lines of code */
+    line-height: 1.5;
+    background-color: $background-off-colour;
+    direction: ltr;
+
+    code {
+        padding-top: 0rem;
     }
   }
