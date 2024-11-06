@@ -6,19 +6,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  background: $background-colour;
-  color: $primary-brand-colour;
-  min-height: 80vh;
+  color: $background-colour;
   gap: 3rem;
+  width: 80%;
   max-width: 1400px;
 }
 .container {
   position: relative;
   width: 80vw;
-  min-height: 80vh;
-}
-.container1 {
-  box-shadow: 10px 10px 5px lightblue;
 }
 
 .imgContainer {
@@ -54,9 +49,8 @@
   }
 }
 .heroImg {
-  height: 80vh;
-  object-fit: contain;
-  position: relative;
+  width: 100%; 
+  height: auto !important;
 }
 
 .content {
@@ -112,4 +106,33 @@
     white-space: pre-wrap;
     font-family: monospace;
   }
+}
+
+.members {
+  width: 8rem;
+  color: $background-colour;
+  border: 2px solid $background-colour;
+  background-color: $primary-brand-colour;
+  border-radius: 2rem;
+  padding: 7px 15px;
+  text-align: center;
+  margin: 1rem auto;
+
+  &:focus {
+    background-color: lighten($primary-brand-colour, 10%);
+    outline: none;
+    border-color: $background-colour;
+  }
+
+  &:hover {
+    background-color: lighten($primary-brand-colour, 10%);
+    cursor: pointer;
+  }
+}
+
+.githubAccounts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
 }

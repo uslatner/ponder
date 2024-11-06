@@ -5,10 +5,9 @@
   background-color: $secondary-brand-colour;
   color: $background-colour;
   padding: -1rem 1px 1px;
-  /* max-width: 1600px; */
-  margin: 200px 200px 200px;
   margin-left: 100px 100px 100px;
-  width: 1550px;
+  max-width: 1400px;
+  width: 80%;
   border-radius: 6rem 6rem 6rem 6rem;
   display: block;
   justify-content: center;
@@ -19,9 +18,9 @@
   background-color: $primary-brand-colour;
   color: $background-colour;
   padding: 5rem 4% 4%;
-  /* max-width: 1600px; */
   margin: 05% 5% 5%;
-  width: 1450px;
+  max-width: 1400px;
+  width: 80%;
   border-radius: 5rem 5rem 5rem 5rem;
   display: flex;
   justify-content: center;
