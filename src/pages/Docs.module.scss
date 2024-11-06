@@ -76,6 +76,10 @@
       margin-bottom: 1rem;
       margin-top: 2.5rem;
     }
+
+    .firstTitle {
+        margin-top: 0rem;
+    }
   
     p,
     code {
@@ -86,13 +90,29 @@
     }
   
     code {
-      display: block;
       background-color: $background-off-colour;
       padding: 0.5rem;
-      border-radius: 5px;
+      border-radius: 1rem;
+      padding-left: 1rem;
+      padding-top: 1rem;
     }
   }
   
   .punctuation {
     direction: ltr;
+  }
+
+  .codeContainer {
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: $background-off-colour;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        padding-top: 1rem;
+    }
   }

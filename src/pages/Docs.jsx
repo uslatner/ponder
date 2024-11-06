@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Docs.module.scss';
+import CopyBtn from '../components/common/copyBtn';
 
 const Docs = () => {
   const scrollToSection = (event, id) => {
@@ -25,16 +26,22 @@ const Docs = () => {
       </aside>
       <main className={styles.docsContent}>
         <section id="intro">
-            <h2>Introduction</h2>
+            <h2 className={styles.firstTitle}>Introduction</h2>
           <p className={styles.punctuation}>Team DBUG DINGOES from Holmesglen Ponder Spinners has crafted a set of animated SVG spinners and loading indicators, so you don’t have to spend time coding and debugging UI components from scratch. Enhance your app's loading experience with visually captivating components!</p>
         </section>
         
         <section id="installation">
-          <h2>Installation</h2>
-          <p className={styles.punctuation}>To install and set up the library, run:</p>
-          <code>npm i @holmesdev/ponder-spinners</code>
-          <p className={styles.punctuation}>Or using Yarn:</p>
-          <code>yarn add @holmesdev/ponder-spinners</code>
+            <h2>Installation</h2>
+            <p className={styles.punctuation}>To install and set up the library, run:</p>
+            <div className={styles.codeContainer}>
+                <CopyBtn textToCopy="npm i @holmesdev/ponder-spinners" theme="dark"/>
+                <code>npm i @holmesdev/ponder-spinners</code>
+            </div>
+            <p className={styles.punctuation}>Or using Yarn:</p>
+            <div className={styles.codeContainer}>
+                <CopyBtn textToCopy="yarn add @holmesdev/ponder-spinners" theme='dark'/>
+                <code>yarn add @holmesdev/ponder-spinners</code>
+            </div>
         </section>
 
         <section id="components">
