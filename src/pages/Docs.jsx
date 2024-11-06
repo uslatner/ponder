@@ -45,45 +45,48 @@ const Docs = () => {
         </section>
 
         <section id="components">
-          <h2>Spinner Components Animation</h2>
-          <p className={styles.punctuation}>This library includes various React components for spinners and animations, helping you enhance your UI effortlessly using styled-components for animations and customizations.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Import Statement</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Spin</td>
-                <td><code>{`import {Spin} from "@holmesdev/ponder-spinners"`}</code></td>
-                <td>Rotating circular spinner with customizable speed, direction, and color.</td>
-              </tr>
-              <tr>
-                <td>Dots</td>
-                <td><code>{`import {Dots} from "@holmesdev/ponder-spinners"`}</code></td>
-                <td>Sequentially jumping dots creating a wave-like loading effect.</td>
-              </tr>
-              <tr>
-                <td>PulseBox</td>
-                <td><code>{`import {PulseBox} from "@holmesdev/ponder-spinners"`}</code></td>
-                <td>Morphing boxes that shift between squares and circles in a sequence.</td>
-              </tr>
-              <tr>
-                <td>Wave</td>
-                <td><code>{`import {Wave} from "@holmesdev/ponder-spinners"`}</code></td>
-                <td>Animated wave with customizable size, colors, speed, and opacity.</td>
-              </tr>
-              <tr>
-                <td>Circles</td>
-                <td><code>{`import {Circles} from "@holmesdev/ponder-spinners"`}</code></td>
-                <td>Animated set of morphing circles with customizable size, colors, and duration.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+            <h2>Current Spinner Components</h2>
+            <p className={styles.punctuation}>
+                This library includes various React components for spinners and animations, helping you enhance your UI effortlessly using styled-components for animations and customizations.
+            </p>
+            <table className={styles.spinnerTable}>
+                <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Import Statement</th>
+                    <th>Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td className={styles.punctuation}>Rotating circular spinner with customizable speed, direction, and color.</td>
+                    <td className={styles.punctuation}><code>{`import {Spin} from "@holmesdev/ponder-spinners"`}</code></td>
+                    <td>Spin</td>
+                </tr>
+                <tr>
+                    <td className={styles.punctuation}>Sequentially jumping dots creating a wave-like loading effect.</td>
+                    <td className={styles.punctuation}><code>{`import {Dots} from "@holmesdev/ponder-spinners"`}</code></td>
+                    <td>Dots</td>
+                </tr>
+                <tr>
+                    <td className={styles.punctuation}>Morphing boxes that shift between squares and circles in a sequence.</td>
+                    <td className={styles.punctuation}><code>{`import {PulseBox} from "@holmesdev/ponder-spinners"`}</code></td>
+                    <td>PulseBox</td>
+                </tr>
+                <tr>
+                    <td className={styles.punctuation}>Animated wave with customizable size, colors, speed, and opacity.</td>
+                    <td className={styles.punctuation}><code>{`import {Wave} from "@holmesdev/ponder-spinners"`}</code></td>
+                    <td>Wave</td>
+                </tr>
+                <tr>
+                    <td className={styles.punctuation}>Animated set of morphing circles with customizable size, colors, and duration.</td>
+                    <td className={styles.punctuation}><code>{`import {Circles} from "@holmesdev/ponder-spinners"`}</code></td>
+                    <td>Circles</td>
+                </tr>
+                </tbody>
+            </table>
+            </section>
+
 
 
         <section id="usage">
