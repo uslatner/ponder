@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 0 5%;
   color: $background-colour;
-  gap: 3rem;
+  gap: 5rem;
   width: 80%;
   max-width: 1400px;
 }
@@ -51,6 +51,9 @@
 .heroImg {
   width: 100%; 
   height: auto !important;
+  background-color: $background-colour;
+  border-radius: 6rem;
+  padding: 3rem 2rem 3rem 0rem;
 }
 
 .content {
