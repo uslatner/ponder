@@ -28,6 +28,16 @@ const Docs = () => {
         <section id="intro">
             <h2 className={styles.firstTitle}>Introduction</h2>
           <p className={styles.punctuation}>Team DBUG DINGOES from Holmesglen Ponder Spinners has crafted a set of animated SVG spinners and loading indicators, so you don’t have to spend time coding and debugging UI components from scratch. Enhance your app's loading experience with visually captivating components!</p>
+          <p className={styles.punctuation}>Check out our 
+            <a href="https://github.com/DBUG-DINGOES/customised-spinners" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                GitHub 
+            </a> 
+             for more details, or visit our 
+            <a href="https://www.npmjs.com/package/@holmesdev/ponder-spinners" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                NPM documentation
+            </a>
+            .
+            </p>
         </section>
         
         <section id="installation">
