@@ -4,10 +4,10 @@ import CopyBtn from '../components/common/copyBtn';
 
 const Docs = () => {
   const scrollToSection = (event, id) => {
-    event.preventDefault(); // Prevent the default anchor behavior
-    const element = document.getElementById(id); // Find the section to scroll to
+    event.preventDefault();
+    const element = document.getElementById(id); 
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the element
+      element.scrollIntoView({ behavior: 'smooth' }); 
     }
   };
 
