@@ -176,192 +176,175 @@ const Docs = () => {
                 </section>
 
 
-        <section id="properties">
-          <h2>Component Properties 📋</h2>
-          <h3>Spin</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Property</th>
-                <th>Type</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>color1</td>
-                <td>string</td>
-                <td>Color 1 of the circular spinner. Defaults to #FF6F61.</td>
-              </tr>
-              <tr>
-                <td>color2</td>
-                <td>string</td>
-                <td>Color 2 of the circular spinner. Defaults to #ffa9a1.</td>
-              </tr>
-              <tr>
-                <td>opacity1</td>
-                <td>number</td>
-                <td>Opacity of the color 1. Defaults to 1.</td>
-              </tr>
-              <tr>
-                <td>opacity2</td>
-                <td>number</td>
-                <td>Opacity of the color 2. Defaults to 0.5.</td>
-              </tr>
-              <tr>
-                <td>speed</td>
-                <td>string</td>
-                <td>Speed of the rotation (e.g., 1s). Defaults to 1s.</td>
-              </tr>
-              <tr>
-                <td>direction</td>
-                <td>string</td>
-                <td>Direction of rotation (e.g., 360deg). Defaults to -360deg.</td>
-              </tr>
-              <tr>
-                <td>size</td>
-                <td>string</td>
-                <td>The size of the spinner (e.g., 100). Defaults to 100.</td>
-              </tr>
-            </tbody>
-          </table>
+                <section id="properties">
+                    <h2>Component Properties</h2>
 
-          <h3>Dots</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Property</th>
-                <th>Type</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>colors</td>
-                <td>array of strings</td>
-                <td>Colors for each dot. Minimum 2 colors required.</td>
-              </tr>
-              <tr>
-                <td>size</td>
-                <td>number</td>
-                <td>Size of each dot in pixels. Default is 8.</td>
-              </tr>
-              <tr>
-                <td>duration</td>
-                <td>string</td>
-                <td>Duration for dot animation (default: 0.5s).</td>
-              </tr>
-            </tbody>
-          </table>
+                    <h3>Spin</h3>
+                    <table className={styles.spinnerTable}>
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Property</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td className={styles.punctuation}>Color 1 of the circular spinner. Defaults to #FF6F61.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color1</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color 2 of the circular spinner. Defaults to #ffa9a1.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color2</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Opacity of the color 1. Defaults to 1.</td>
+                            <td className={styles.punctuation}><code>number</code></td>
+                            <td className={styles.punctuation}><code>opacity1</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Opacity of the color 2. Defaults to 0.5.</td>
+                            <td className={styles.punctuation}><code>number</code></td>
+                            <td className={styles.punctuation}><code>opacity2</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Speed of the rotation (e.g., 1s). Defaults to 1s.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>speed</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Direction of rotation (e.g., 360deg). Defaults to -360deg.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>direction</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>The size of the spinner (e.g., 100). Defaults to 100.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>size</code></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-          <h3>PulseBox</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Property</th>
-                <th>Type</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>color</td>
-                <td>array of strings</td>
-                <td>Colors for pulse animation. Minimum 2 colors required.</td>
-              </tr>
-              <tr>
-                <td>duration</td>
-                <td>string</td>
-                <td>Duration for pulse animation (default: 0.5s).</td>
-              </tr>
-              <tr>
-                <td>size</td>
-                <td>number</td>
-                <td>Size of pulse box (default: 80).</td>
-              </tr>
-            </tbody>
-          </table>
+                    <h3>Dots</h3>
+                    <table className={styles.spinnerTable}>
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Property</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td className={styles.punctuation}>Colors for each dot. Minimum 2 colors required.</td>
+                            <td className={styles.punctuation}><code>array of strings</code></td>
+                            <td className={styles.punctuation}><code>colors</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Size of each dot in pixels. Default is 8.</td>
+                            <td className={styles.punctuation}><code>number</code></td>
+                            <td className={styles.punctuation}><code>size</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Duration for dot animation (default: 0.5s).</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>duration</code></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-          <h3>Wave</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Property</th>
-                <th>Type</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>size</td>
-                <td>string</td>
-                <td>Size of the wave. Default is 70px.</td>
-              </tr>
-              <tr>
-                <td>color</td>
-                <td>array of strings</td>
-                <td>Colors for the wave. Minimum 2 colors required.</td>
-              </tr>
-              <tr>
-                <td>speed</td>
-                <td>string</td>
-                <td>Speed of the wave animation (default: 1s).</td>
-              </tr>
-              <tr>
-                <td>opacity</td>
-                <td>number</td>
-                <td>Opacity of the wave (default: 1).</td>
-              </tr>
-            </tbody>
-          </table>
+                    <h3>PulseBox</h3>
+                    <table className={styles.spinnerTable}>
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Property</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td className={styles.punctuation}>Colors for pulse animation. Minimum 2 colors required.</td>
+                            <td className={styles.punctuation}><code>array of strings</code></td>
+                            <td className={styles.punctuation}><code>color</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Duration for pulse animation (default: 0.5s).</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>duration</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Size of pulse box (default: 80).</td>
+                            <td className={styles.punctuation}><code>number</code></td>
+                            <td className={styles.punctuation}><code>size</code></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-          <h3>Circles</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Property</th>
-                <th>Type</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>size</td>
-                <td>number</td>
-                <td>Size of circles (default: 90).</td>
-              </tr>
-              <tr>
-                <td>color1</td>
-                <td>string</td>
-                <td>Color 1 of the first circle (default: #FF6F61).</td>
-              </tr>
-              <tr>
-                <td>color2</td>
-                <td>string</td>
-                <td>Color 2 of the second circle (default: #22333B).</td>
-              </tr>
-              <tr>
-                <td>color3</td>
-                <td>string</td>
-                <td>Color 3 of the third circle (default: #ffa9a1).</td>
-              </tr>
-              <tr>
-                <td>duration</td>
-                <td>string</td>
-                <td>Duration for circle animation (default: 3s).</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+                    <h3>Wave</h3>
+                    <table className={styles.spinnerTable}>
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Property</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td className={styles.punctuation}>Size of the wave. Default is 70px.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>size</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color(s) for the wave animation.</td>
+                            <td className={styles.punctuation}><code>array of strings</code></td>
+                            <td className={styles.punctuation}><code>color</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Speed of the wave animation.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>speed</code></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Circles</h3>
+                    <table className={styles.spinnerTable}>
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Property</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td className={styles.punctuation}>Size of each circle.</td>
+                            <td className={styles.punctuation}><code>number</code></td>
+                            <td className={styles.punctuation}><code>size</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Duration of the animation for the circles.</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>duration</code></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </section>
+
+
 
         <section id="inspiration">
           <h2>Inspiration</h2>
-          <p>We were inspired by the beauty and simplicity of minimalist design. These spinners are intended to enhance user experience without overwhelming the interface.</p>
+          <p className={styles.punctuation}>We were inspired by the beauty and simplicity of minimalist design. These spinners are intended to enhance user experience without overwhelming the interface.</p>
         </section>
 
         <section id="thanks">
           <h2>Special Thanks</h2>
-          <p>A big thank you to our mentors and everyone who supported us during this project!</p>
+          <p className={styles.punctuation}>A big thank you to our mentors Alex, Amberle and Daniel, and everyone who supported us during this project!</p>
         </section>
       </main>
     </div>
