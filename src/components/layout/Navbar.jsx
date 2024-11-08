@@ -20,7 +20,7 @@ export default function Navbar() {
       </div>
       <div className={styles.links}>
         <a href="/">Home</a>
-        <a href="https://github.com/DBUG-DINGOES/customised-spinners" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/DBUG-DINGOES/ponder-package" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="/Docs">Docs</a>
         <a href="/AboutUs">AboutUs</a>
       </div>
