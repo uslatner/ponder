@@ -6,7 +6,7 @@ import styles from "./WaveHead.module.scss";
 import cloudneck04 from '../../assets/cloudneck04.svg';
 import {Wave} from "@holmesdev/ponder-spinners"
 
-const WaveHead = ( {colors, size, opacity, speed}) => {
+const WaveHead = ( {color1, color2, size, opacity, speed}) => {
 
   return (
     <div className={styles.spinner}>
@@ -24,7 +24,8 @@ const WaveHead = ( {colors, size, opacity, speed}) => {
         {Wave && (
           <div className={styles.spinnerComponent}>
             <Wave 
-              color={colors}
+              color1={color1}
+              color2={color2}
               size={size}
               opacity={opacity}
               speed={speed}

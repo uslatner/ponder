@@ -3,30 +3,39 @@ import Link from 'next/link';
 import styles from './PulseBoxPage.module.scss';
 import PulseBoxHead from '../SpinnerHeads/PulseBoxHead';
 import CopyBtn from '../common/copyBtn';
+import { PulseBox } from '@holmesdev/ponder-spinners';
 
 const PulseBoxPage = ({ initialValues }) => {
   const [formValues, setFormValues] = useState({
-    colors: [...initialValues.colors],
+    color1: initialValues.color1,
+    color2: initialValues.color2,
+    color3: initialValues.color3,
+    color4: initialValues.color4
   });
 
   const [copiedCode, setCopiedCode] = useState(
     `<PulseBox 
-        colors={[${initialValues.colors.map(color => `"${color}"`).join(', ')}]} 
+        color1="${initialValues.color1}"
+        color2="${initialValues.color2}"
+        color3="${initialValues.color3}"
+        color4="${initialValues.color4}"
     />`
   );
 
-  const handleChange = (index, e) => {
-    const newColors = [...formValues.colors];
-    newColors[index] = e.target.value;
-    setFormValues((prev) => ({
-      ...prev,
-      colors: newColors,
-    }));
-
-    // Dynamically update the copied code
-    setCopiedCode(`<PulseBox 
-        colors={[${newColors.map(color => `"${color}"`).join(', ')}]} 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => {
+      const updatedValues = { ...prevValues, [name]: value };
+      // Update the copied code with new form values
+      setCopiedCode(
+        `<PulseBox 
+        color1="${updatedValues.color1}"
+        color2="${updatedValues.color2}"
+        color3="${updatedValues.color3}"
+        color4="${updatedValues.color4}"
     />`);
+      return updatedValues;
+    });
   };
 
   return (
@@ -34,7 +43,12 @@ const PulseBoxPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <PulseBoxHead colors={formValues.colors} />
+          <PulseBoxHead 
+            color1={formValues.color1}
+            color2={formValues.color2}
+            color3={formValues.color3}
+            color4={formValues.color4} 
+            />
           <p className={styles.spinnerText}>
             Experience the magic of the Sequential Box Morph – it's not just a transformation, it's an evolution of colors and shapes. As each box changes hue, it dances gracefully, bringing life to your loading experience. Who knew waiting could be this captivating?
           </p>
@@ -63,17 +77,54 @@ const PulseBoxPage = ({ initialValues }) => {
         </div>
 
         <form>
-          {formValues.colors.map((color, index) => (
-            <div key={index} className={styles.inputField}>
-              <label>{`Box ${index + 1} Color: `}</label>
-              <input
-                className={styles.input}
-                type="text"
-                value={color}
-                onChange={(e) => handleChange(index, e)}
-              />
-            </div>
-          ))}
+          <div className={styles.inputField}>
+            <label>Color1 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color1"
+              placeholder="color1"
+              onChange={handleChange}
+              value={formValues.color1}
+            />
+          </div>
+
+          <div className={styles.inputField}>
+            <label>Color2 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color2"
+              placeholder="color2"
+              onChange={handleChange}
+              value={formValues.color2}
+            />
+          </div>
+
+          <div className={styles.inputField}>
+            <label>Color3 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color3"
+              placeholder="color3"
+              onChange={handleChange}
+              value={formValues.color3}
+            />
+          </div>
+
+          <div className={styles.inputField}>
+            <label>Color4 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color4"
+              placeholder="color4"
+              onChange={handleChange}
+              value={formValues.color4}
+            />
+          </div>
+
         </form>
       </div>
     </div>

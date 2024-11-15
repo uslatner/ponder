@@ -52,6 +52,12 @@ const Docs = () => {
                 <CopyBtn textToCopy="yarn add @holmesdev/ponder-spinners" theme='dark'/>
                 <code>yarn add @holmesdev/ponder-spinners</code>
             </div>
+            <p className={styles.punctuation}>!IMPORTANT</p>
+            <p className={styles.punctuation}>Styled-components is the JavaScript CSS library used to build our components.</p>
+            <p className={styles.punctuation}>To ensure that they work as intended, you will need to separately install styled-components within both the devDependencies & peerDependencies inside of your package.json upon installation of the package.</p>
+            <p className={styles.punctuation}>You MUST also ensure that you are:</p>
+            <p>Using React.js v18.3.1 or higher</p>
+            <p>Using styled-components v6.1.13 or higher</p>
         </section>
 
         <section id="components">
@@ -127,10 +133,12 @@ const Docs = () => {
                         <code>
                         {`import { Dots } from "@holmesdev/ponder-spinners";`}
                         <br />
-                        {`
-                        <Dots 
-                            colors={["#22333B", "#FF6F61", "#B7AEA3"]} 
-                        />`}
+                    {`
+                <Dots 
+                    color1="#22333B" 
+                    color2="#FF6F61" 
+                    color3="#B7AEA3" 
+                />;`}
                         </code>
                     </div>
                 </div>
@@ -142,9 +150,12 @@ const Docs = () => {
                         {`import { PulseBox } from "@holmesdev/ponder-spinners";`}
                         <br />
                         {`
-                        <PulseBox 
-                            color={["#22333B", "#FF6F61", "#ffa9a1", "#22333B"]} 
-                        />`}
+                <PulseBox
+                    color1="#22333B"
+                    color2="#FF6F61"
+                    color3="#ffa9a1"
+                    color4="#22333B"
+                />;`}
                         </code>
                     </div>
                 </div>
@@ -156,12 +167,13 @@ const Docs = () => {
                         {`import { Wave } from "@holmesdev/ponder-spinners";`}
                         <br />
                         {`
-                        <Wave 
-                            size="70px" 
-                            color={["#22333B", "#EAE0D5"]} 
-                            speed="2s" 
-                            opacity={1} 
-                        />`}
+                <Wave 
+                    size={70} 
+                    color1="#22333B" 
+                    color2="#EAE0D5" 
+                    speed="2s" 
+                    opacity={1} 
+                />`}
                         </code>
                     </div>
                 </div>
@@ -172,14 +184,14 @@ const Docs = () => {
                         <code>
                         {`import { Circles } from "@holmesdev/ponder-spinners";`}
                         <br />
-                        {`
-                        <Circles 
-                            size={90} 
-                            color1="#FF6F61" 
-                            color2="#22333B" 
-                            color3="#ffa9a1" 
-                            duration={3} 
-                        />`}
+                {`
+                <Circles 
+                    size={90} 
+                    color1="#FF6F61" 
+                    color2="#22333B" 
+                    color3="#ffa9a1" 
+                    duration={3} 
+                />`}
                         </code>
                     </div>
                 </div>
@@ -248,19 +260,19 @@ const Docs = () => {
                         </thead>
                         <tbody>
                         <tr>
-                            <td className={styles.punctuation}>Colors for each dot. Minimum 2 colors required.</td>
-                            <td className={styles.punctuation}><code>array of strings</code></td>
-                            <td className={styles.punctuation}><code>colors</code></td>
-                        </tr>
-                        <tr>
-                            <td className={styles.punctuation}>Size of each dot in pixels. Default is 8.</td>
-                            <td className={styles.punctuation}><code>number</code></td>
-                            <td className={styles.punctuation}><code>size</code></td>
-                        </tr>
-                        <tr>
-                            <td className={styles.punctuation}>Duration for dot animation (default: 0.5s).</td>
+                            <td className={styles.punctuation}>Color for the first dot. Defaults to "#22333B".</td>
                             <td className={styles.punctuation}><code>string</code></td>
-                            <td className={styles.punctuation}><code>duration</code></td>
+                            <td className={styles.punctuation}><code>color1</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color for the second dot. Defaults to "#EAE0D5".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color2</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color for the third dot. Defaults to "#C6AC8F".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color3</code></td>
                         </tr>
                         </tbody>
                     </table>
@@ -276,20 +288,26 @@ const Docs = () => {
                         </thead>
                         <tbody>
                         <tr>
-                            <td className={styles.punctuation}>Colors for pulse animation. Minimum 2 colors required.</td>
-                            <td className={styles.punctuation}><code>array of strings</code></td>
-                            <td className={styles.punctuation}><code>color</code></td>
-                        </tr>
-                        <tr>
-                            <td className={styles.punctuation}>Duration for pulse animation (default: 0.5s).</td>
+                            <td className={styles.punctuation}>Color for the first box. Defaults to "#22333B"..</td>
                             <td className={styles.punctuation}><code>string</code></td>
-                            <td className={styles.punctuation}><code>duration</code></td>
+                            <td className={styles.punctuation}><code>color1</code></td>
                         </tr>
                         <tr>
-                            <td className={styles.punctuation}>Size of pulse box (default: 80).</td>
-                            <td className={styles.punctuation}><code>number</code></td>
-                            <td className={styles.punctuation}><code>size</code></td>
+                            <td className={styles.punctuation}>	Color for the second box. Defaults to "#FF6F61".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color2</code></td>
                         </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color for the third box. Defaults to "#ffa9a1".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color3</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>	Color for the fourth box. Defaults to "#22333B".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color4</code></td>
+                        </tr>
+                        
                         </tbody>
                     </table>
 
@@ -304,19 +322,29 @@ const Docs = () => {
                         </thead>
                         <tbody>
                         <tr>
-                            <td className={styles.punctuation}>Size of the wave. Default is 70px.</td>
+                            <td className={styles.punctuation}>Size of the wave. Default is 30px.</td>
                             <td className={styles.punctuation}><code>string</code></td>
                             <td className={styles.punctuation}><code>size</code></td>
                         </tr>
                         <tr>
-                            <td className={styles.punctuation}>Color(s) for the wave animation.</td>
-                            <td className={styles.punctuation}><code>array of strings</code></td>
-                            <td className={styles.punctuation}><code>color</code></td>
+                            <td className={styles.punctuation}>Color for the first wave. Defaults to "#22333B".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color1</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color for the second wave. Defaults to "#EAE0D5".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color2</code></td>
                         </tr>
                         <tr>
                             <td className={styles.punctuation}>Speed of the wave animation.</td>
                             <td className={styles.punctuation}><code>string</code></td>
                             <td className={styles.punctuation}><code>speed</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Opacity of the wave (0 to 1). Defaults to 1.</td>
+                            <td className={styles.punctuation}><code>number</code></td>
+                            <td className={styles.punctuation}><code>opacity</code></td>
                         </tr>
                         </tbody>
                     </table>
@@ -337,7 +365,22 @@ const Docs = () => {
                             <td className={styles.punctuation}><code>size</code></td>
                         </tr>
                         <tr>
-                            <td className={styles.punctuation}>Duration of the animation for the circles.</td>
+                            <td className={styles.punctuation}>	Color of the first circle. Defaults to "#FF6F61".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color1</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>	Color of the second circle. Defaults to "#22333B".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color2</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Color of the third circle. Defaults to "#ffa9a1".</td>
+                            <td className={styles.punctuation}><code>string</code></td>
+                            <td className={styles.punctuation}><code>color3</code></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.punctuation}>Duration of the animation cycle in seconds. Defaults to 3s.</td>
                             <td className={styles.punctuation}><code>string</code></td>
                             <td className={styles.punctuation}><code>duration</code></td>
                         </tr>

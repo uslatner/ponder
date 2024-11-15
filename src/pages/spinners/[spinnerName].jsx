@@ -26,20 +26,26 @@ const SpinnerPage = () => {
     dots: {
       Component: DotsPage,
       initialValues: {
-        colors: ["#22333B", "#FF6F61", "#B7AEA3"],
+        color1: "#22333B",
+        color2: "#FF6F61",
+        color3: "#B7AEA3",
       },
     },
     pulsebox: { // Add Sequential Box Morph spinner
       Component: PulseBoxPage,
       initialValues: {
-        colors: ["#22333B", "#FF6F61", "#ffa9a1", "#22333B"],
+        color1: "#22333B",
+        color2: "#FF6F61",
+        color3:"#ffa9a1",
+        color4:"#22333B"
       },
     },
     wave: {
       Component: WavePage,
       initialValues: {
         size: "60",
-        colors: ["#ffa9a1", "#FF6F61"],
+        color1: "#ffa9a1", 
+        color2: "#FF6F61",
         size: 100,
         opacity: 1,
         speed: "2s",

@@ -6,7 +6,7 @@ import styles from "./DotsHead.module.scss";
 import cloudneck02 from '../../assets/cloudwneck02.svg';
 import { Dots } from "@holmesdev/ponder-spinners";
 
-const DotsHead = ( {colors} ) => {
+const DotsHead = ( {color1, color2, color3} ) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -23,7 +23,9 @@ const DotsHead = ( {colors} ) => {
         {Dots && (
           <div className={styles.spinnerComponent}>
             <Dots
-              colors={colors}
+              color1={color1}
+              color2={color2}
+              color3={color3}
             />
           </div>
         )}

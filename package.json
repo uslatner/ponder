@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@holmesdev/ponder-spinners": "^1.0.25",
+    "@holmesdev/ponder-spinners": "^1.0.29",
     "@remix-run/react": "^2.12.1",
     "my-awesome-spinner": "^1.0.7",
     "next": "14.2.7",

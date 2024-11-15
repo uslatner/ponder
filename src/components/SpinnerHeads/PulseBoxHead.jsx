@@ -6,7 +6,7 @@ import styles from "./PulseBoxHead.module.scss";
 import cloudneck03 from '../../assets/cloudneck03.svg';
 import { PulseBox } from "@holmesdev/ponder-spinners";
 
-const PulseBoxHead = ({colors}) => {
+const PulseBoxHead = ({color1, color2, color3, color4}) => {
   return (
     <div className={styles.spinner}>
       <div className={styles.imageWrapper}>
@@ -23,7 +23,10 @@ const PulseBoxHead = ({colors}) => {
         {PulseBox && (
           <div className={styles.spinnerComponent}>
             <PulseBox
-              colors={colors}/>
+              color1={color1}
+              color2={color2}
+              color3={color3}
+              color4={color4}/>
           </div>
         )}
       </div>

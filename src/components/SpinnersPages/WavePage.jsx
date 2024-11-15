@@ -5,13 +5,21 @@ import CopyBtn from "../common/copyBtn";
 import Link from "next/link";
 
 const WavePage = ({ initialValues }) => {
-  const [formValues, setFormValues] = useState(initialValues);
+  const [formValues, setFormValues] = useState({
+    color1: initialValues.color1,
+    color2: initialValues.color2,
+    size: initialValues.size,
+    speed: initialValues.speed,
+    opacity: initialValues.opacity
+  });
+
   const [copiedCode, setCopiedCode] = useState(
     `<Wave
-      colors={[${initialValues.colors.map((color) => `"${color}"`).join(", ")}]} 
-      size="${initialValues.size}"
-      opacity="${initialValues.opacity}"
-      speed="${initialValues.speed}"
+        color1="${initialValues.color1}"
+        color2="${initialValues.color2}"
+        size="${initialValues.size}"
+        speed="${initialValues.speed}"
+        opacity="${initialValues.opacity}"
     />`
   );
 
@@ -19,34 +27,15 @@ const WavePage = ({ initialValues }) => {
     const { name, value } = e.target;
     setFormValues((prevValues) => {
       const updatedValues = { ...prevValues, [name]: value };
-      // Update the code whenever the form changes
-      setCopiedCode(`<Wave
-        colors={[${updatedValues.colors.map((color) => `"${color}"`).join(", ")}]} 
+      // Update the copied code with new form values
+      setCopiedCode(
+        `<Wave
+        color1="${updatedValues.color1}"
+        color2="${updatedValues.color2}"
         size="${updatedValues.size}"
-        opacity="${updatedValues.opacity}"
         speed="${updatedValues.speed}"
-      />`);
-      return updatedValues;
-    });
-  };
-
-  const handleColorChange = (index, e) => {
-    const newColors = [...formValues.colors]; // Copy current colors
-    newColors[index] = e.target.value; // Update specific color
-    setFormValues((prevValues) => {
-      const updatedValues = {
-        ...prevValues,
-        colors: newColors,
-      };
-
-      // Update the copiedCode with the new color values
-      setCopiedCode(`<Wave
-        color={[${updatedValues.colors.map((color) => `"${color}"`).join(", ")}]} 
-        size="${updatedValues.size}"
         opacity="${updatedValues.opacity}"
-        speed="${updatedValues.speed}"
-      />`);
-
+    />`);
       return updatedValues;
     });
   };
@@ -57,7 +46,8 @@ const WavePage = ({ initialValues }) => {
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
           <WaveHead
-            colors={formValues.colors}
+            color1={formValues.color1}
+            color2={formValues.color2}
             size={formValues.size}
             opacity={formValues.opacity}
             speed={formValues.speed}
@@ -90,19 +80,30 @@ const WavePage = ({ initialValues }) => {
         </div>
 
         <form>
-          {formValues.colors.map((color, index) => (
-            <div className={styles.inputField} key={index}>
-              <label>{`Color ${index + 1}: `}</label>
-              <input
-                className={styles.input}
-                type="text"
-                name={`color${index + 1}`}
-                placeholder={`Color ${index + 1}`}
-                onChange={(e) => handleColorChange(index, e)}
-                value={color}
-              />
-            </div>
-          ))}
+        <div className={styles.inputField}>
+            <label>Color1 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color1"
+              placeholder="color1"
+              onChange={handleChange}
+              value={formValues.color1}
+            />
+          </div>
+
+          <div className={styles.inputField}>
+            <label>Color2 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color2"
+              placeholder="color2"
+              onChange={handleChange}
+              value={formValues.color2}
+            />
+          </div>
+          
           <div className={styles.inputField}>
             <label>Size: </label>
             <input

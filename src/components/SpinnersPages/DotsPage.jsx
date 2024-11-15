@@ -6,25 +6,33 @@ import DotsHead from '../SpinnerHeads/DotsHead';
 import CopyBtn from '../common/copyBtn';
 
 const DotsPage = ({ initialValues }) => {
-  const [formValues, setFormValues] = useState(initialValues);
+  const [formValues, setFormValues] = useState({
+    color1: initialValues.color1,
+    color2: initialValues.color2,
+    color3: initialValues.color3
+  });
+
   const [copiedCode, setCopiedCode] = useState(
-    `<Dots
-        colors={[${initialValues.colors.map(color => `"${color}"`).join(', ')}]} 
+    `<Dots 
+        color1="${initialValues.color1}"
+        color2="${initialValues.color2}"
+        color3="${initialValues.color3}"
     />`
   );
 
-  const handleChange = (index, e) => {
-    const newColors = [...formValues.colors]; // Create a copy of the current colors
-    newColors[index] = e.target.value; // Update the color at the index
-    setFormValues((prev) => ({
-      ...prev, // Keep the other properties
-      colors: newColors, // Update the colors array
-    }));
-
-    // Dynamically update the copied code
-    setCopiedCode(`<Dots 
-        colors={[${newColors.map(color => `"${color}"`).join(', ')}]} 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => {
+      const updatedValues = { ...prevValues, [name]: value };
+      // Update the copied code with new form values
+      setCopiedCode(
+        `<Dots
+        color1="${updatedValues.color1}"
+        color2="${updatedValues.color2}"
+        color3="${updatedValues.color3}"
     />`);
+      return updatedValues;
+    });
   };
 
   return (
@@ -32,7 +40,11 @@ const DotsPage = ({ initialValues }) => {
       {/* Left side (Spinner and buttons) */}
       <div className={styles.leftSide}>
         <div className={styles.spinnerWrapper}>
-          <DotsHead colors={formValues.colors} />
+        <DotsHead
+            color1={formValues.color1}
+            color2={formValues.color2}
+            color3={formValues.color3}
+            />
           <p className={styles.spinnerText}>
           Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?
           </p>
@@ -61,16 +73,41 @@ const DotsPage = ({ initialValues }) => {
         </div>
 
         <form>
-          {formValues.colors.map((color, index) => (
-            <div key={index} className={styles.inputField}>
-              <label>{`Color ${index + 1}: `}</label>
-              <input className={styles.input}
-                type="text"
-                value={color}
-                onChange={(e) => handleChange(index, e)}
-              />
-            </div>
-          ))}
+        <div className={styles.inputField}>
+            <label>Color1 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color1"
+              placeholder="color1"
+              onChange={handleChange}
+              value={formValues.color1}
+            />
+          </div>
+
+          <div className={styles.inputField}>
+            <label>Color2 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color2"
+              placeholder="color2"
+              onChange={handleChange}
+              value={formValues.color2}
+            />
+          </div>
+
+          <div className={styles.inputField}>
+            <label>Color3 </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="color3"
+              placeholder="color3"
+              onChange={handleChange}
+              value={formValues.color3}
+            />
+          </div>
         </form>
       </div>
     </div>
