@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <p>test test test</p>
+      <p>test test</p>
       <div id="loadersSection">
         <Loaders />
       </div>
